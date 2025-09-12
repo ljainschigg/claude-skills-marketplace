@@ -1,22 +1,26 @@
 site_name: Documentation
-site_description: Documentation for Mirantis Kubernetes Engine 4
+site_description: Documentation for Mirantis Secure Registry 4
 site_author: Mirantis, Inc.
 
 docs_dir: docs/
 repo_name: MKE 4 Documentation
-repo_url: https://github.com/jjainschigg-r/new-mke-docs
-edit_uri: https://github.com/jjainschigg-r/new-mke-docs/edit/main/docs/
+repo_url: https://github.com/Mirantis/msr-docs
+edit_uri: https://github.com/Mirantis/msr-docs/edit/main/docs/
 
 copyright:
   Copyright &copy; 2025 Mirantis Inc. - All rights reserved
 
 theme:
   name: "material"
-  highlightjs: true
+  palette:
+    - scheme: default
+      primary: black
+      accent: black
+  # highlightjs: true
   language: "en"
-  custom_dir: docs/custom_theme
-  favicon: img/favicon.svg
-  logo: img/mke-4k-inverted.svg
+  # custom_dir: docs/custom_theme
+  favicon: assets/favicon.svg
+  logo: assets/mke-4k-inverted.svg
   
   palette:
     - scheme: default
@@ -45,9 +49,10 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+  
 
 extra_javascript:
-  - javascripts/plausible.js
+  - javascripts/plausible.js            # this will be for metrics
 
 plugins:
   - search
@@ -69,23 +74,7 @@ plugins:
       redirect_maps:
  
 nav:
-  - Welcome to the MKE 4k docs: index.md
-  - Concepts:
-    - MKE 4k architecture: concepts/architecture.md
-    - Configuration: concepts/configuration.md
-    - k0rdent templates: concepts/k0rdent-templates.md
-    - Container Network Interfaces (CNIs): concepts/cni.md
-  - Getting Started:
-    - Overview: getting-started/index.md
-    - System requirements: getting-started/system-requirements.md 
-    - Install MKE 4k CLI: getting-started/install-MKE-4k-CLI.md
-    - Create a cluster: getting-started/create-cluster.md 
-    - Offline installation: getting-started/offline-installation.md 
-    - Licensing MKE 4k:
-      - Overview: getting-started/licensing-mke4k/index.md
-      - Obtain your MKE 4k license: getting-started/licensing-mke4k/obtain-mke4k-license.md 
-      - Set license in configuration: getting-started/licensing-mke4k/set-license-in-configuration.md 
-      - Apply license after installation: getting-started/licensing-mke4k/apply-mke4k-license-post-installation.md 
+  - MSR 4 Documentation: index.md
   - Support, Services, Contact:
     - Overview: support/index.md
     - Get support: https://www.mirantis.com/support/enterprise-support-services/
@@ -94,11 +83,13 @@ nav:
 
 
 markdown_extensions:
+  - admonition
   - callouts
   - tables
   - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.highlight: {}
-  - pymdownx.superfences: {}
   - pymdownx.inlinehilite: {}
   - pymdownx.superfences:
       custom_fences:
@@ -133,105 +124,4 @@ extra:
     default: stable
   analytics:
   docsVersionInfo:
-    k0rdentName: Mirantis k0rdent Enterprise
-    k0rdentVersion: 1-1-0
-    k0rdentDotVersion: 1.1.0
-    ociRegistry: oci://registry.mirantis.com/k0rdent-enterprise/charts/k0rdent-enterprise
-    k0rdentDigestValue: sha256:3645c61d59e88143e58a7050ca5b2601f5f5810f1eff163ddba74d1477cdc08c
-    k0rdentDigestDate: Wed Aug 13 2025 08:42:36 2025
-    k0rdentTagList: https://github.com/k0rdent/k0rdent-enterprise/tags
-    kofVersions:
-      kofDotVersion: 1.1.0
-    providerVersions:
-      dashVersions:
-        clusterApi: 1-0-4
-        clusterApiProviderAws: 1-0-3
-        clusterApiProviderAzure: 1-0-3
-        clusterApiProviderDocker: 1-0-2
-        clusterApiProviderGcp: 1-0-3
-        clusterApiProviderOpenstack: 1-0-3
-        clusterApiProviderVsphere: 1-0-2
-        clusterApiProviderIpam: 1-0-2
-        clusterApiProviderInfoblox: 1-0-1
-        k0smotron: 1-0-6
-        adoptedCluster: 1-0-1
-        awsEksCluster: 1-0-2
-        awsHostedCpCluster: 1-0-11
-        awsStandaloneCpCluster: 1-0-12
-        azureAksCluster: 1-0-1
-        azureHostedCpCluster: 1-0-13
-        azureStandaloneCpCluster: 1-0-13
-        dockerHostedCpCluster: 1-0-2
-        gcpGkeCluster: 1-0-3
-        gcpHostedCpCluster: 1-0-12
-        gcpStandaloneCpCluster: 1-0-12
-        openstackHostedCpCluster: 1-0-2
-        openstackStandaloneCpCluster: 1-0-11
-        remoteCluster: 1-0-9
-        vsphereHostedCpCluster: 1-0-10
-        vsphereStandaloneCpCluster: 1-0-11
-        sveltosProvider: 0-57-2
-      dotVersions:
-        clusterApi: 1.0.4
-        clusterApiProviderAws: 1.0.3
-        clusterApiProviderAzure: 1.0.3
-        clusterApiProviderDocker: 1.0.2
-        clusterApiProviderGcp: 1.0.3
-        clusterApiProviderOpenstack: 1.0.3
-        clusterApiProviderVsphere: 1.0.2
-        clusterApiProviderIpam: 1.0.2
-        clusterApiProviderInfoblox: 1.0.1
-        k0smotron: 1.0.6
-        adoptedCluster: 1.0.1
-        awsEksCluster: 1.0.2
-        awsHostedCpCluster: 1.0.11
-        awsStandaloneCpCluster: 1.0.12
-        azureAksCluster: 1.0.1
-        azureHostedCpCluster: 1.0.13
-        azureStandaloneCpCluster: 1.0.13
-        dockerHostedCpCluster: 1.0.2
-        gcpGkeCluster: 1.0.3
-        gcpHostedCpCluster: 1.0.12
-        gcpStandaloneCpCluster: 1.0.12
-        openstackHostedCpCluster: 1.0.2
-        openstackStandaloneCpCluster: 1.0.11
-        remoteCluster: 1.0.9
-        vsphereHostedCpCluster: 1.0.10
-        vsphereStandaloneCpCluster: 1.0.11
-        sveltosProvider: 0.57.2
-    servicesVersions:
-      dashVersions:
-        certManager: 1-17-1  
-        externalSecrets: 0-11-0
-        ingressNginx: 4-11-3   
-        kyverno: 3-2-6       
-        velero: 8-1-0   
-      dotVersions:
-        certManager: 1.17.1  
-        externalSecrets: 0.11.0
-        ingressNginx: 4.11.3   
-        kyverno: 3.2.6       
-        velero: 8.1.0  
-    addonVersions:
-      digests:
-        k0rdentUI: sha256:60ab7a9dafff9dc143a1d5d697052408f3cf8b27f53c460700d09668a5eb2c71
-        k0rdentUIDate: Sat Jul 26 14:28:03 2025
-      dashVersions:
-        ceph: 1-0-3
-        dex: 0-19-1
-        hco: 1-15-1-mira  
-        stacklightOperator: 0-1-0
-        stacklightChart: 0-1-0-mcp-16
-        clusterApiProviderCapm3: 0-2-0
-        capm3StandaloneCpCluster: 0-2-0
-        k0rdentUI: 1-0-0-rc7
-      dotVersions:
-        ceph: 1.0.3
-        dex: 0.19.1
-        hco: 1.15.1-mira    
-        stacklightOperator: 0.1.0  
-        stacklightChart: 0.1.0-mcp-16
-        clusterApiProviderCapm3: 0.2.0
-        capm3StandaloneCpCluster: 0.2.0
-        k0rdentUI: 1.0.0-rc7
 

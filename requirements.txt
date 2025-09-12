@@ -14,3 +14,4 @@ mkdocs-no-sitemap-plugin
 mkdocs-ezglossary-plugin==1.7.1
 markdown-callouts==0.4.0
 mkdocs-redirects==1.2.2
+pymdown-extensions>=10.8
