@@ -19,8 +19,8 @@ theme:
   # highlightjs: true
   language: "en"
   # custom_dir: docs/custom_theme
-  favicon: assets/favicon.svg
-  logo: assets/mke-4k-inverted.svg
+  favicon: assets/msr-fav.png
+  logo: assets/msr-4-inverted.svg
   
   palette:
     - scheme: default
