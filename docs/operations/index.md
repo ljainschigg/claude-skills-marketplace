@@ -13,6 +13,9 @@ the [Harbor Administration upstream documentation](https://goharbor.io/docs/2.10
 - [Managing Garbage Collection](managing-garbage-collection.md)
 - [Managing Project Permissions](managing-project-permissions.md)
 - [Managing Tag Retention Rules](managing-tag-retention-rules.md)
+- [Metrics Collection and Visualization](metrics.md)
+- [Mirror Images](mirror-images.md)
 - [Signing Artifacts with Cosign](signing-artifacts-with-cosign.md)
+- [Upgrade Guide](upgrade.md)
 - [Vulnerability Scanning](vulnerability-scanning.md)
 

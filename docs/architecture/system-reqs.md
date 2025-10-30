@@ -1,5 +1,4 @@
 # System requirements
 
-This section shows the system requirements needed to run MSR 4.
-
-{% include "/./common/system-reqs-common.md" %}
+To learn more about Mirantis Secure Registry (MSR) system requirements, go to
+[Prerequisites](../installation/msr-system-reqs.md) in the Installation Guide.

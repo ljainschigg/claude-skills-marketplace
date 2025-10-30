@@ -79,6 +79,11 @@ not_in_nav: |
 nav:
   - MSR 4 Documentation: index.md
   - Product Overview: product-overview.md
+  - MSR 4 Key Changes:
+    - MSR 4 Key Changes: whats-new/index.md
+    - Product Highlights: whats-new/product-highlights.md
+    - Differences Between MSR Versions: whats-new/differences-between-versions.md
+    - Removed Features: whats-new/removed-features.md
   - Architecture:
     - Architecture: architecture/index.md
     - Reference Architecture:
@@ -132,7 +137,10 @@ nav:
     - Managing Garbage Collection: operations/managing-garbage-collection.md
     - Managing Project Permissions: operations/managing-project-permissions.md
     - Managing Tag Retention Rules: operations/managing-tag-retention-rules.md
+    - Metrics Collection and Visualization: operations/metrics.md
+    - Mirror Images: operations/mirror-images.md
     - Signing Artifacts with Cosign: operations/signing-artifacts-with-cosign.md
+    - Upgrade Guide: operations/upgrade.md
     - Vulnerability Scanning: operations/vulnerability-scanning.md
   - Backup Guide:
     - Backup Guide: backup/index.md
@@ -145,6 +153,7 @@ nav:
       - Snapshot Backups with Velero: backup/ha-backup/snapshot-backups-with-velero.md
       - Schedule Backups and Restores: backup/ha-backup/automating-and-scheduling.md
     - Single Instance Backup: backup/instance-backup.md
+  - Release Compatibility Matrix: compat-matrix.md
   - Release Cadence and Support Lifecycle: release-cadence-and-support-cycle.md
   - Support, Services, Contact:
     - Overview: support/index.md
