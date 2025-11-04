@@ -170,6 +170,55 @@ nav:
       - Snapshot Backups with Velero: backup/ha-backup/snapshot-backups-with-velero.md
       - Schedule Backups and Restores: backup/ha-backup/automating-and-scheduling.md
     - Single Instance Backup: backup/instance-backup.md
+  - Migration Guide:
+    - Migration Guide: migration/index.md
+    - Manual Migration:
+      - Manual Migration: migration/manual-migration/index.md
+      - Manual Migration Prerequisites: migration/manual-migration/manual-migration-prerequisites.md
+      - Perform Migration: migration/manual-migration/migrate-msr.md
+      - Post-Migration Configuration: migration/manual-migration/manual-configure-migration.md
+    - Tool Migration:
+      - Tool Migration: migration/tool-migration/index.md
+      - What to Expect During the Migration: migration/tool-migration/what-to-expect-when-transitioning.md
+      - Migration Prerequisites: migration/tool-migration/migration-prerequisites.md
+      - Install Migration Tool: migration/tool-migration/install-migration-tool.md
+      - Database Access Configuration: migration/tool-migration/db-configuration.md
+      - Configure Migration Settings: tmigration/ool-migration/tool-configure-migration.md
+      - Perform Migration:
+        - Perform Migration: migration/perform-tool-migration.md
+        - Migrate Projects: migration/tool-migration/partial-tool-migration/migrate-projects.md
+        - Migrate Permissions: migration/tool-migration/partial-tool-migration/migrate-permissions.md
+        - Migrate Push and Poll Mirroring Policies: migration/tool-migration/partial-tool-migration/migrate-push-poll-mirroring-policies.md
+      - Validate Migration Data: migration/tool-migration/validate-migration-data.md
+      - Post-Migration Configuration: migration/tool-migration/configure-migration-settings.md
+      - Post-Migration Cleanup: migration/tool-migration/clean-up-after-migration.md
+      - Migration Tool Reference:
+        - Migration Tool Reference: migration/tool-migration/index.md
+        - Command Reference: migration/tool-migration/command-reference.md
+        - Configuration Reference: migration/tool-migration/configuration-reference.md
+      - Migration Tool Release Notes:
+        - Migration Tool Release Notes: tool-migration/index.md
+        - Migration Tool 1.2.0: tool-migration/1-2-0.md
+        - Migration Tool 1.1.0: tool-migration/1-1-0.md
+        - Migration Tool 1.0.1: tool-migration/1-0-1.md
+        - Migration Tool 1.0.0: tool-migration/1-0-0.md
+  - Release Notes:
+    - Release Notes: release-notes/index.md
+    - 4.13.2:
+      - 4.13.2: release-notes/4-13-2/index.md
+      - Changelog: release-notes/4-13-2/changelog.md
+      - Security information: release-notes/4-13-2/security-information.md
+      - Known issues: release-notes/4-13-2/known-issues.md
+    - 4.13.1:
+      - 4.13.1: release-notes/4-13-1/index.md
+      - Changelog: release-notes/4-13-1/changelog.md
+      - Security information: release-notes/4-13-1/security-information.md
+      - Known issues: release-notes/4-13-1/known-issues.md
+    - 4-13-0:
+      - 4.13.0: release-notes/4-13-0/index.md
+      - Changelog: release-notes/4-13-0/changelog.md
+      - Security information: release-notes/4-13-0/security-information.md
+      - Known issues: release-notes/4-13-0/known-issues.md
   - Release Compatibility Matrix: compat-matrix.md
   - Release Cadence and Support Lifecycle: release-cadence-and-support-cycle.md
   - Support, Services, Contact:
