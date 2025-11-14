@@ -3,8 +3,8 @@
 Mirantis Secure Registry (MSR) supports two installation scenarios designed to
 meet most customer needs:
 
-- [High availability installation](installation-with-high-availability/index)  
-- [Single host installation](msr-docker-install/index)
+- [High availability installation](installation-with-high-availability/index.md)  
+- [Single host installation](msr-docker-install/index.md)
 
 The following comparison highlights key differences to help you choose the most
 appropriate option for your environment.
@@ -30,10 +30,10 @@ for assistance with specialized installations or custom deployments.
 
 ### Installation Topics
 
-- [System Requirements](msr-system-reqs)
-- [Prepare MKE for MSR Installation](prepare-mke-for-msr-install)
-- [Installation with High Availability](installation-with-high-availability/index)
-- [Single Host Installation](msr-docker-install/index)
+- [System Requirements](msr-system-reqs.md)
+- [Prepare MKE for MSR Installation](prepare-mke-for-msr-install.md))
+- [Installation with High Availability](installation-with-high-availability/index.md))
+- [Single Host Installation](msr-docker-install/index.md))
 
 
 

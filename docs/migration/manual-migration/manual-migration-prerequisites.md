@@ -23,16 +23,16 @@ Complete the following tasks to prepare the target environment for
 migration:
 
 - Verify that the system meets all prerequisites.
-  See [Prerequisites](../../msr-system-reqs.md).
+  See [Prerequisites](../../installation/msr-system-reqs.md).
 - Install MSR 4 using the steps in the
-  [Install MSR with High Availability](../../installation-with-high-availability/index.md).
+  [Install MSR with High Availability](../../installation/installation-with-high-availability/index.md).
 - Configure authentication as described in the
-  [Authentication Configuration](../../../operations/authentication-configuration/authentication-configuration.md).
+  [Authentication Configuration](../../operations/authentication-configuration/authentication-configuration.md).
 
 **Storage**
 
 Ensure that the target system has sufficient storage capacity to accommodate
-all migrated artifact. The storage must be separate from MSR 2.9 or MSR 3.1.
+all migrated artifacts. The storage must be separate from MSR 2.9 or MSR 3.1.
 
 * The PostgreSQL database must have enough space for the following:
 

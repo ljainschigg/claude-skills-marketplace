@@ -28,7 +28,7 @@ environment to an MSR 4.x environment, follow these steps:
         Avoid specifying a user or repository namespace, as this will restrict
         access. Using the root enables full crawling of the host.
 
-    ![Edit New Endpoint](../../../_images/edit-new-endpoint.png)
+    ![Edit New Endpoint](../../_images/edit-new-endpoint.png)
 
 5. Navigate to **Administration** → **Replications**.
 
@@ -66,14 +66,14 @@ environment to an MSR 4.x environment, follow these steps:
     
      </details>
 
-    ![Edit Replication Rule](../../../_images/edit-replication-rule.png)
+    ![Edit Replication Rule](../../_images/edit-replication-rule.png)
 
 8. Select the rule created in the previous step and click
    **Replicate**. Be aware that pulling down the entire host may take
    some time to complete.
 
-    ![Replications](../../../_images/replications.png)
+    ![Replications](../../_images/replications.png)
 
 9. To check the status of the replication process, click the job ID.
 
-    ![Check Status](../../../_images/check-status.png)
+    ![Check Status](../../_images/check-status.png)

@@ -12,15 +12,15 @@ step.
 
 Before proceeding, review the following topics:
 
-- [What's New](../../../whats-new/index.md) for changes in MSR 4 behavior.
-- [Removed Features](../../../whats-new/removed-features.md) 
+- [What's New](../../whats-new/index.md) for changes in MSR 4 behavior.
+- [Removed Features](../../whats-new/removed-features.md) 
   especially if you use Swarm, custom image signing, or repository permissions.
 
 ## Manual Migration Contents
 
-| Step | Description |
-|------|-------------|
-| [Migration prerequisites](manual-migration-prerequisites) | Lists the technical requirements needed to run the manual migration successfully. |
-| [Perform migration](migrate-msr) | Outlines how to run the manual migration to export repository data from the source MSR and import it into the MSR 4 deployment. |
-| [Post-migration configuration](manual-configure-migration) | Provides guidance on updating pipelines, credentials, and access controls for the new MSR system. |
+| Step                                                          | Description |
+|---------------------------------------------------------------|-------------|
+| [Migration prerequisites](manual-migration-prerequisites.md)  | Lists the technical requirements needed to run the manual migration successfully. |
+| [Perform migration](migrate-msr.md)                           | Outlines how to run the manual migration to export repository data from the source MSR and import it into the MSR 4 deployment. |
+| [Post-migration configuration](manual-configure-migration.md) | Provides guidance on updating pipelines, credentials, and access controls for the new MSR system. |
 

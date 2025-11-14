@@ -7,6 +7,6 @@
 
 ### Contents
 
-- [Changelog](4-13-1/changelog)
-- [Security Information](4-13-1/security-information)
-- [Known Issues](4-13-1/known-issues)
+- [Changelog](changelog.md)
+- [Security Information](security-information.md)
+- [Known Issues](known-issues.md)

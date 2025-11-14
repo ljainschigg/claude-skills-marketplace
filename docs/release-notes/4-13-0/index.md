@@ -6,9 +6,9 @@
 
 ### Contents
 
-- [Changelog](4-13-0/changelog)
-- [Security Information](4-13-0/security-information)
-- [Known Issues](4-13-0/known-issues)
+- [Changelog](changelog.md)
+- [Security Information](security-information.md)
+- [Known Issues](known-issues.md)
 
 
 

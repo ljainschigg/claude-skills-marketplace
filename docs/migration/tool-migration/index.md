@@ -22,28 +22,27 @@ ensuring operational continuity and minimizing risk.
 
 !!! note
     Before starting migration, review:
-    - [:ref:`whats-new`] for MSR 4 behavioral changes.  
-    - [:ref:`removed-features`] and [:ref:`what-to-expect-when-transitioning`]  
+    - [MSR 4 Key Changes](../../whats-new/index.md) for MSR 4 behavioral changes.  
+    - [Removed features](../../whats-new/removed-features.md) and
+      [What to Expect During the Migration](what-to-expect-when-transitioning.md)
       if you use Swarm, custom signing, or repository permissions.  
-    - Contact Mirantis support if additional guidance is needed.
-
----
+    - Contact Mirantis support if additional guidance is necessary.
 
 ## Tool Migration Contents
 
-| Step | Description |
-|------|--------------|
-| [What to Expect During the Migration](what-to-expect-when-transitioning.md) | Summarizes major behavioral and architectural changes between MSR versions. Review before planning your migration timeline. |
-| [Migration Prerequisites](migration-prerequisites.md) | Lists technical requirements for running the migration tool successfully. |
-| [Install Migration Tool](install-migration-tool.md) | Explains how to download, verify, and install the migration tool on your migration host. |
-| [Database Access Configuration](db-configuration.md) | Describes configuration for source and destination databases. |
-| [Configure Migration Settings](configure-migration-settings.md) | Guides configuration of the target environment for migration. |
-| [Perform Migration](perform-tool-migration.md) | Details how to export from source MSR and import into the new MSR 4 deployment. |
-| [Migrate Projects](partial-tool-migration/migrate-projects.md) | Describes project migration steps. |
-| [Migrate Permissions](partial-tool-migration/migrate-permissions.md) | Describes how to migrate permissions and roles. |
+| Step                                                                                                       | Description |
+|------------------------------------------------------------------------------------------------------------|--------------|
+| [What to Expect During the Migration](what-to-expect-when-transitioning.md)                                | Summarizes major behavioral and architectural changes between MSR versions. Review before planning your migration timeline. |
+| [Migration Prerequisites](migration-prerequisites.md)                                                      | Lists technical requirements for running the migration tool successfully. |
+| [Install Migration Tool](install-migration-tool.md)                                                        | Explains how to download, verify, and install the migration tool on your migration host. |
+| [Database Access Configuration](db-configuration.md)                                                       | Describes configuration for source and destination databases. |
+| [Configure Migration Settings](configure-migration-settings.md)                                            | Guides configuration of the target environment for migration. |
+| [Perform Migration](perform-tool-migration.md)                                                             | Details how to export from source MSR and import into the new MSR 4 deployment. |
+| [Migrate Projects](partial-tool-migration/migrate-projects.md)                                             | Describes project migration steps. |
+| [Migrate Permissions](partial-tool-migration/migrate-permissions.md)                                       | Describes how to migrate permissions and roles. |
 | [Migrate Push and Poll Mirroring Policies](partial-tool-migration/migrate-push-poll-mirroring-policies.md) | Explains how to migrate mirroring policies. |
-| [Validate Migration Data](validate-migration-data.md) | Provides optional verification steps to ensure successful migration of repositories, metadata, and configurations. |
-| [Post-Migration Configuration](tool-configure-migration.md) | Covers updates to pipelines, credentials, and access controls in MSR 4. |
-| [Post-Migration Cleanup](clean-up-after-migration.md) | Lists cleanup steps, including decommissioning old MSR and freeing temporary resources. |
-| [Migration Tool Reference](reference-migration-tool/index.md) | Contains CLI options and configuration parameters for the migration tool. |
-| [Migration Tool Release Notes](migration-tool-release-notes/index.md) | Provides release notes for the migration tool. |
+| [Validate Migration Data](validate-migration-data.md)                                                      | Provides optional verification steps to ensure successful migration of repositories, metadata, and configurations. |
+| [Post-Migration Configuration](tool-configure-migration.md)                                                | Covers updates to pipelines, credentials, and access controls in MSR 4. |
+| [Post-Migration Cleanup](clean-up-after-migration.md)                                                      | Lists cleanup steps, including decommissioning old MSR and freeing temporary resources. |
+| [Migration Tool Reference](migration-tool-reference/index.md)                                                       | Contains CLI options and configuration parameters for the migration tool. |
+| [Migration Tool Release Notes](migration-tool-release-notes/index.md)                                      | Provides release notes for the migration tool. |

@@ -58,7 +58,7 @@ To migrate repositories as projects:
     REPLICATION_TRIGGER_CRON="0 0 1 * * *"
     ```
 
-    See the [Configuration Reference](../reference-migration-tool/configuration-reference.md)
+    See the [Configuration Reference](../migration-tool-reference/configuration-reference.md)
     for complete configuration reference.
 
 2. Start an interactive partial migration:

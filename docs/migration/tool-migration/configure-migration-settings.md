@@ -44,7 +44,7 @@ To configure your target environment:
     REPLICATION_TRIGGER_CRON="0 0 1 * * *"
     ```
 
-    Refer to the [Configuration Reference](reference-migration-tool/configuration-reference.md) 
+    Refer to the [Configuration Reference](migration-tool-reference/configuration-reference.md) 
     for more details.
 
 ## Configure Migration Mode
