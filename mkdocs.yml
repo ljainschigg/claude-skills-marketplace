@@ -129,9 +129,9 @@ nav:
         - Prerequisites: installation/installation-with-high-availability/ha-prerequisites.md
         - Install Helm: installation/installation-with-high-availability/ha-install-helm.md
         - Create PVC across Kubernetes workers: installation/installation-with-high-availability/ha-create-pvc-across-kubernetes-workers.md
-        - Install highly available PostgreSQL: installation/installation-with-high-availability/ha-install-and-set-up-postgresql.md
-        - Install highly available Redis: installation/installation-with-high-availability/ha-install-highly-available-redis.md
-        - Install highly available MSR: installation/installation-with-high-availability/install-ha-msr.md
+        - Install Highly Available PostgreSQL: installation/installation-with-high-availability/ha-install-and-set-up-postgresql.md
+        - Install Highly Available Redis: installation/installation-with-high-availability/ha-install-highly-available-redis.md
+        - Install Highly Available MSR: installation/installation-with-high-availability/install-ha-msr.md
     - Install MSR single host using Docker Compose:
         - Install MSR single host using Docker Compose: installation/msr-docker-install/index.md
         - Prerequisites: installation/msr-docker-install/docker-compose-prerequisites.md
