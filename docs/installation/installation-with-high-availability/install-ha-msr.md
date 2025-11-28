@@ -60,7 +60,7 @@
 
 4. Modify the `msr-values.yaml` file to configure MSR:
 
-    * Set the expose type:
+    - Set the expose type:
 
         ```yaml
         expose:
@@ -70,7 +70,7 @@
             type: nodePort
         ```
 
-    * Set the cert source to TLS and the secret name:
+    - Set the cert source to TLS and the secret name:
 
         ```yaml
         certSource: secret
@@ -81,9 +81,9 @@
             secretName: "<NAME-OF-YOUR-SECRET>"
         ```
 
-    * Set the `nodePort` ports to allow `nodePort ingress`. You can use any  
+    - Set the `nodePort` ports to allow `nodePort ingress`. You can use any  
       ephemeral port. Some Kubernetes distributions restrict the range.  
-      Generally accepted range is 32768-35535.
+      The range ``32768–35535`` is generally accepted.
 
         ```yaml
         nodePort:
@@ -102,14 +102,14 @@
                     nodePort: <httpNodePort>
         ```
 
-    * Set the external URL, if using nodePort use a worker node IP address  
+    - Set the external URL, if using nodePort use a worker node IP address  
       (the same one that you used in generating the cert):
 
         ```yaml
         externalURL: <A-WORKER-NODE-EXTERNAL-IP:httpsNodePort>
         ```
 
-    * Enable data persistence:
+    - Enable data persistence:
 
         ```yaml
         persistence:
@@ -133,7 +133,7 @@
                     annotations: {}
         ```
 
-    * Set the initial admin password:
+    - Set the initial admin password:
 
         ```yaml
         harborAdminPassword: "Harbor12345"
@@ -144,7 +144,7 @@
             MSR web UI, or provide an existing secret using the  
             `existingSecretAdminPasswordKey` parameter.
 
-    * Set the replica number to at least 2 under `portal`, `registry`,  
+    - Set the replica number to at least 2 under `portal`, `registry`,  
       `core`, `trivy`, and `jobservice`:
 
         ```yaml
@@ -154,7 +154,7 @@
             replicas: 2
         ```
 
-    * Set PostgreSQL as an external database:
+    - Set PostgreSQL as an external database:
 
         ```yaml
         database:
@@ -163,7 +163,7 @@
             type: external
         ```
 
-    * Update external database section to reflect PostgreSQL configuration:
+    - Update external database section to reflect PostgreSQL configuration:
 
         ```yaml
         external:
@@ -175,7 +175,7 @@
             existingSecret: msr.msr-postgres.credentials.postgresql.acid.zalan.do
         ```
 
-    * Set Redis as an external database:
+    - Set Redis as an external database:
 
         ```yaml
         redis:
@@ -184,7 +184,7 @@
             type: external
         ```
 
-    * Update the external Redis configuration:
+    - Update the external Redis configuration:
 
         ```yaml
         external:
@@ -192,7 +192,7 @@
             existingSecret: msr-redis-secret
         ```
 
-    * Check your settings against a full example of MSR configuration:
+    - Check your settings against a full example of MSR configuration:
 
         ```yaml
         expose:
