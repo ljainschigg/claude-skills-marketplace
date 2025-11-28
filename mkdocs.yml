@@ -137,6 +137,13 @@ nav:
         - Prerequisites: installation/msr-docker-install/docker-compose-prerequisites.md
         - Install MSR using Docker Compose: installation/msr-docker-install/docker-compose-install.md
         - Manage MSR with Docker Compose: installation/msr-docker-install/manage-with-docker-compose.md
+        - Install Highly Available MSR: installation/installation-with-high-availability/install-ha-msr.md
+    - Install MSR single host using Helm:
+        - Install MSR single host using Helm: installation/msr-helm-install/index.md
+        - Prerequisites: installation/msr-helm-install/helm-prerequisites.md
+        - Install Helm: installation/msr-helm-install/helm-install.md
+        - Create PVC across Kubernetes workers: installation/msr-helm-install/helm-storage.md
+        - Install standalone MSR: installation/msr-helm-install/helm-install-msr.md
   - Operations Guide:
     - Operations Guide: operations/index.md
     - Authentication Configuration:

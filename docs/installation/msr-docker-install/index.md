@@ -1,4 +1,4 @@
-# Install MSR single host using Docker Compose
+# Install MSR single-host using Docker Compose
 
 This section describes how to perform a new single-node Mirantis Secure
 Registry (MSR) installation and configuration using Docker Compose. By
