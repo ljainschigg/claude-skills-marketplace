@@ -198,14 +198,14 @@ nav:
       - Migration Prerequisites: migration/tool-migration/migration-prerequisites.md
       - Install Migration Tool: migration/tool-migration/install-migration-tool.md
       - Database Access Configuration: migration/tool-migration/db-configuration.md
-      - Configure Migration Settings: migration/tool-migration/tool-configure-migration.md
+      - Configure Migration Settings: migration/tool-migration/configure-migration-settings.md
       - Perform Migration:
         - Perform Migration: migration/tool-migration/perform-tool-migration.md
         - Migrate Projects: migration/tool-migration/partial-tool-migration/migrate-projects.md
         - Migrate Permissions: migration/tool-migration/partial-tool-migration/migrate-permissions.md
         - Migrate Push and Poll Mirroring Policies: migration/tool-migration/partial-tool-migration/migrate-push-poll-mirroring-policies.md
       - Validate Migration Data: migration/tool-migration/validate-migration-data.md
-      - Post-Migration Configuration: migration/tool-migration/configure-migration-settings.md
+      - Post-Migration Configuration: migration/tool-migration/tool-configure-migration.md
       - Post-Migration Cleanup: migration/tool-migration/clean-up-after-migration.md
       - Migration Tool Reference:
         - Migration Tool Reference: migration/tool-migration/migration-tool-reference/index.md
