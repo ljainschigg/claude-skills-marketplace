@@ -10,9 +10,13 @@ circumventing the movement of large registry data files.
 
 ## Prerequisites
 
-Verify that a compatible CSI driver is installed and configured in your
-Kubernetes cluster. For Snapshot backup, the CSI driver must support snapshot
-operations for your storage provider.
+- A freshly provisioned Kubernetes cluster that is
+  ready for application deployment and free of any existing state
+  or active resources that conflict with the deployment of the restored
+  MSR 4 stack.
+- Verify that a compatible CSI driver is installed and configured in your
+  Kubernetes cluster. For Snapshot backup, the CSI driver must support snapshot
+  operations for your storage provider.
 
 ## Procedure
 

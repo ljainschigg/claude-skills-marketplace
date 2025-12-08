@@ -118,11 +118,12 @@ MSR 4.
         ```
 
     !!! note
+
         Alternatively MinIO Tenant can use LoadBalancer and Ingress, refer to
         MinIO official documentation for more details:
 
-        * `Kubernetes <https://docs.min.io/enterprise/aistor-object-store/installation/kubernetes/>`__
-        * `Deploy AIStor on Kubernetes <https://docs.min.io/enterprise/aistor-object-store/installation/kubernetes/install/deploy-aistor-on-kubernetes/#deploy-tenant-helm>`__
+        * [Kubernetes](https://docs.min.io/enterprise/aistor-object-store/installation/kubernetes/)
+        * [Deploy AIStor on Kubernetes](https://docs.min.io/enterprise/aistor-object-store/installation/kubernetes/install/deploy-aistor-on-kubernetes/#deploy-tenant-helm)
 
 5. Login to MinIO console:
 
@@ -133,8 +134,8 @@ MSR 4.
 6. Create a bucket for backup and restore data.
 
 7. Install the Velero's CLI on both the Source (Primary) and Target (Recovery)
-   Kubernetes clusters using the instructions from `the official Velero
-   documentation <https://velero.io/docs/v1.8/basic-install/>`__.
+   Kubernetes clusters using the instructions from 
+   [the official Velero documentation](https://velero.io/docs/v1.8/basic-install/).
 
 8. Install Velero on both the Source (Primary) and Target (Recovery)
    Kubernetes cluster:

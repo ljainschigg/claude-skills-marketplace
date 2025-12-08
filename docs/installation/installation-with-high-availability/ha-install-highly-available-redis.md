@@ -27,7 +27,7 @@
         Set `clusterSize` to the desired number of Redis nodes.
 
     ```bash
-    helm install -i msr-redis redis-replication \
+    helm install msr-redis redis-replication \
         --repo https://ot-container-kit.github.io/helm-charts \
         --set redisReplication.clusterSize=3 \
         --set redisReplication.redisSecret.secretName=msr-redis-secret \
