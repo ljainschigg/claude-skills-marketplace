@@ -105,7 +105,7 @@
       the same one that you used during generating of the cert:
  
          ```yaml
-         externalURL: <A-WORKER-NODE-EXTERNAL-IP:httpsNodePort>
+         externalURL: https://<A-WORKER-NODE-EXTERNAL-IP:httpsnodePort>
          ```
 
     - Enable data persistence:
