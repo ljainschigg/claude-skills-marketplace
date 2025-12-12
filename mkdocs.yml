@@ -73,8 +73,7 @@ not_in_nav: |
     /common/*
 
 nav:
-  - MSR 4 Documentation: index.md
-  - Product Overview: product-overview.md
+  - Product Overview: index.md
   - MSR 4 Key Changes:
     - MSR 4 Key Changes: whats-new/index.md
     - Product Highlights: whats-new/product-highlights.md
