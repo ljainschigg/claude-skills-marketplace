@@ -6,6 +6,14 @@ follow the same inheritance structure as in earlier MSR versions. See
 [What to Expect During the Migration](../what-to-expect-when-transitioning.md)
 for detailed description.
 
+The Migration Tool detects the authentication methods used in MSR 2 and 3,
+as well as the authentication method configured in MSR 4. During migration,
+all user and group references are converted to the MSR 4 authentication method.
+For example, an MSR 3 environment that mixes LDAP and SAML is normalized
+to the single authentication provider configured in MSR 4, such as LDAP or
+OIDC, because MSR 4 does not support using multiple authentication methods
+at the same time.
+
 !!! warning
     If the permissions target paths are business-critical, you should migrate
     them manually to ensure accuracy and avoid disruptions.
@@ -41,6 +49,7 @@ To migrate permissions to MSR 4, you must transfer:
        ```
 
     !!! warning
+
         Do not modify these environment variables after the migration begins.
         Changing them mid-process may cause duplicate groups or inconsistent
         team references.
@@ -60,8 +69,8 @@ To migrate permissions to MSR 4, you must transfer:
 4. Confirm that group data appears under **Groups** in the MSR web UI.
 
     !!! note
-        If the **Groups** section is missing from the main menu, LDAP
-        may not be configured. See [LDAP Authentication](../../../operations/authentication-configuration/ldap-authentication.md)
+        If the **Groups** section is missing from the main menu, LDAP or OIDC
+        may not be configured. See [Authentication Configuration](../../../operations/authentication-configuration/authentication-configuration.md)
         for instructions on how to set up user authentication.
 
 5. Migrate team permissions for namespaces and repositories:

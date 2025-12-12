@@ -42,7 +42,8 @@ preserving the core of your container registry environment:
 
 - **Roles**
 
-  LDAP-based user accounts assigned to project roles are migrated.
+  User accounts based on LDAP, SAML, or SCIM that are assigned to the
+  project roles are migrated.
 
 - **Helm Charts**
 
@@ -88,7 +89,7 @@ The following items must be recreated or reconfigured after the migration:
 
 - **Project Permissions**
 
-  Depending on your permission settings you may need
+  Depending on your permission settings, you may need
   to recreate user and team access rules using MSR 4's project-level model.
 
 - **Project Visibility**

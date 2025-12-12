@@ -53,7 +53,7 @@ To verify that all repositories have been migrated:
 To verify that all groups have been migrated:
 
 1. Filter original MSR Enzi group data by removing any rows where the
-   `groupDN` field is empty:
+   `groupDN` field is empty, these correspond to SAML or SCIM groups:
 
     ```bash
     docker run --rm \
@@ -65,12 +65,8 @@ To verify that all groups have been migrated:
         mlr --csv filter '!is_empty($groupDN)' /app/data/csv/enzi_teams.csv
     ```
 
-    !!! note
-
-        Groups with empty `groupDN` values are skipped during migration and
-        not imported into MSR 4.
-
-2. Count how many valid groups remain after filtering:
+2. Filter original MSR Enzi group data by removing any rows where the
+   `groupDN` field is not empty, these correspond to LDAP groups:
 
     ```bash
     docker run --rm \
@@ -79,7 +75,7 @@ To verify that all groups have been migrated:
         -v ./config:/app/config \
         --network host \
         registry.mirantis.com/msrh/migrate:latest \
-        mlr --csv filter '!is_empty($groupDN)' /app/data/csv/enzi_teams.csv | wc -l
+        mlr --csv filter 'is_empty($groupDN)' /app/data/csv/enzi_teams.csv
     ```
 
 3. Determine how many groups are currently present in MSR 4 using the exported
@@ -92,10 +88,10 @@ To verify that all groups have been migrated:
        -v ./config:/app/config \
        --network host \
        registry.mirantis.com/msrh/migrate:latest \
-       mlr --csv sort -f name data/csv/harbor_groups.csv | wc -l
+       mlr --csv sort -f name data/csv/harbor_groups.csv
     ```
 
-4. Compare the group counts from both steps.
+4. Compare the group list from both steps.
 
 5. Extract and sort group names from the input Enzi set, saving the output to
    a file named `msr_groups`:

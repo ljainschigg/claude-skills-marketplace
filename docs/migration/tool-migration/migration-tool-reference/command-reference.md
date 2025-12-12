@@ -61,14 +61,15 @@ before this step; otherwise, an error will occur. Each team is assigned an
 
 ### -g/--groups
 
-Exports LDAP groups. Because group names must be unique in MSR 4, each group is
-prefixed with its organization name in the format
+Exports SAML/SCIM/LDAP groups. Because group names must be unique in MSR 4,
+each group is prefixed with its organization name in the format
 `<organization>-<group name>`. This naming convention helps prevent name
 collisions. The LDAP group distinguished name (DN) in MSR 4 is set using the
-`groupDN` field from Enzi.
+`groupDN` field from Enzi while the OIDC group is named after the Team name.
 
-Exporting LDAP groups only migrates the group definitions, it does not include
-memberships or permissions. To migrate those, use the `--members` command.
+Exporting SAML/SCIM/LDAP groups only migrates the group definitions, it does
+not include memberships or permissions. To migrate those,
+use the `--members `command.
 
 ### -l/--poll-mirroring
 
