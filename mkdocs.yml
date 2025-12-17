@@ -214,6 +214,7 @@ nav:
         - Configuration Reference: migration/tool-migration/migration-tool-reference/configuration-reference.md
       - Migration Tool Release Notes:
         - Migration Tool Release Notes: migration/tool-migration/migration-tool-release-notes/index.md
+        - Migration Tool 1.4.0: migration/tool-migration/migration-tool-release-notes/1-4-0.md
         - Migration Tool 1.3.0: migration/tool-migration/migration-tool-release-notes/1-3-0.md
         - Migration Tool 1.2.0: migration/tool-migration/migration-tool-release-notes/1-2-0.md
         - Migration Tool 1.1.0: migration/tool-migration/migration-tool-release-notes/1-1-0.md
