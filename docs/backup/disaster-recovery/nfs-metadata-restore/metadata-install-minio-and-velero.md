@@ -16,7 +16,7 @@ MSR 4.
     * Download the MinIO Tenant `values.yml` file:
 
         ```bash
-        curl -sLo values.yml https://raw.githubusercontent.com/minio/operator/master/helm/tenant/values.yml
+        curl -sLo values.yml https://raw.githubusercontent.com/minio/operator/refs/heads/master/helm/tenant/values.yaml
         ```
 
     * Configure a username and password for Minio:

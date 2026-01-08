@@ -46,11 +46,11 @@ To install MSR on MKE you must first configure both the
 
 10. Click **Save**.  
 
-!!! info
-
-    For already deployed MSR instances, issue a rolling restart of  
-    the `postgres-operator` deployment:  
-
-    ```bash
-    kubectl rollout restart deploy/postgres-operator
-    ```
+    !!! info
+   
+        For already deployed MSR instances, issue a rolling restart of  
+        the `postgres-operator` deployment:  
+   
+        ```bash
+        kubectl rollout restart deploy/postgres-operator
+        ```
