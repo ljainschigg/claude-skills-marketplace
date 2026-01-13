@@ -110,17 +110,18 @@ nav:
         - Harbor Helm Chart: architecture/deployment/harbor-helm-chart.md
         - Redis Helm Chart: architecture/deployment/redis-helm-chart.md
         - PostgreSQL Helm Chart: architecture/deployment/postgresql-helm-chart.md
-      - System Requirements: architecture/system-reqs.md
-      - Storage: architecture/storage.md
-      - Networking: architecture/networking.md
-      - Security:
-        - Security: architecture/security/security.md
-        - Kubernetes Security: architecture/security/kubernetes-security.md
-        - Harbor Security: architecture/security/harbor-security.md
-        - K-V Storage (Redis) Security: architecture/security/kv-storage-redis-security.md
-        - DB Service (PostgreSQL) Security: architecture/security/db-service-security.md
-        - Logging and Monitoring: architecture/security/logging-and-monitoring.md
-        - Supply Chain: architecture/security/supply-chain.md
+      - Interact with MSR: architecture/deployment/interact-with-msr-registry.md
+    - System Requirements: architecture/system-reqs.md
+    - Storage: architecture/storage.md
+    - Networking: architecture/networking.md
+    - Security:
+       - Security: architecture/security/security.md
+       - Kubernetes Security: architecture/security/kubernetes-security.md
+       - Harbor Security: architecture/security/harbor-security.md
+       - K-V Storage (Redis) Security: architecture/security/kv-storage-redis-security.md
+       - DB Service (PostgreSQL) Security: architecture/security/db-service-security.md
+       - Logging and Monitoring: architecture/security/logging-and-monitoring.md
+       - Supply Chain: architecture/security/supply-chain.md
   - Installation Guide:
     - Installation Guide: installation/index.md
     - Prepare MKE 3.x for MSR Installation: installation/prepare-mke-for-msr-install.md
