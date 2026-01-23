@@ -1,4 +1,4 @@
-# Resolve instability during bulk replication
+# Instability during bulk replication
 
 When you initiate a large number of replication rules simultaneously,
 for example, more than 200, the surge in concurrent operations can overwhelm

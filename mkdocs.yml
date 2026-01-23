@@ -163,8 +163,9 @@ nav:
     - Signing Artifacts with Cosign: operations/signing-artifacts-with-cosign.md
     - Troubleshoot MSR:
       - Troubleshoot MSR: operations/tshoot/index.md
+      - CPU throttling: operations/tshoot/cpu-throttling.md
+      - Instability during bulk replication: operations/tshoot/instability-during-bulk-replication.md
       - MSR installation may fail on RHEL 9.4 and later: operations/tshoot/rhel-9-4.md
-      - Resolve instability during bulk replication: operations/tshoot/instability-during-bulk-replication.md
     - Upgrade Guide: operations/upgrade.md
     - Vulnerability Scanning: operations/vulnerability-scanning.md
   - Backup Guide:
