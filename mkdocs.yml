@@ -124,7 +124,7 @@ nav:
        - Supply Chain: architecture/security/supply-chain.md
   - Installation Guide:
     - Installation Guide: installation/index.md
-    - Prepare MKE 3.x for MSR Installation: installation/prepare-mke-for-msr-install.md
+    - Prepare MKE for MSR Installation: installation/prepare-mke-for-msr-install.md
     - Prerequisites: installation/msr-system-reqs.md
     - Install MSR with High Availability:
         - Install MSR with High Availability: installation/installation-with-high-availability/index.md
