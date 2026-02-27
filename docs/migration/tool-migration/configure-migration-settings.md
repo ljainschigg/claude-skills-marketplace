@@ -108,7 +108,7 @@ HARBOR_DEFAULT_GROUP_ROLE=read-only # or read-write, or admin
 
 ### Configure Replication Rules
 
-By default, in 1-to-1 migration mode repositories and tags are migrated using
+By default, in 1-to-1 migration mode, repositories and tags are migrated using
 one migration replication rule per organization or project. In some cases,
 administrators might prefer one migration replication rule per repository. To
 enable this capability, set:

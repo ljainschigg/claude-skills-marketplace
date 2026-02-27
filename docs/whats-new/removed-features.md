@@ -3,19 +3,19 @@
 The following capabilities available in previous MSR versions are not included
 in MSR 4:
 
-* **SAML Support**: MSR4 no longer supports SAML authentication and instead
+* **SAML Support**: MSR 4 no longer supports SAML authentication and instead
   uses OpenID Connect (OIDC), a more modern and flexible standard that better
   aligns with cloud-native environments and improves security and scalability.
-  Please refer to [OIDC Authentication](../operations/authentication-configuration/oidc-authentication.md)
+  Refer to [OIDC Authentication](../operations/authentication-configuration/oidc-authentication.md)
   for more information on configuring OIDC.
 * **Promotion Policies**: Automated promotion policies are no longer included.
   Customers can adapt their CI/CD pipelines to achieve similar workflows.
-* **Swarm support** customers can use MSR4 as a single instance for Swarm
+* **Swarm support** customers can use MSR 4 as a single instance for Swarm
   environments instead of HA clusters
 
 # MSR Editions Feature Matrix
 
-| **Feature** | **MSR4 (Harbor-Based)** | **MSR2** | **MSR3** |
+| **Feature** | **MSR 4 (Harbor-Based)** | **MSR2** | **MSR3** |
 |--------------|--------------------------|-----------|-----------|
 | **Distribution** | CNCF Harbor | Proprietary | Proprietary |
 | **Database** | PostgreSQL | RethinkDB | RethinkDB |

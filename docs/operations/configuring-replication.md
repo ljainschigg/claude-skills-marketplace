@@ -40,8 +40,8 @@ Create a replication endpoint in the MSR 4 UI.
 
     - Click **+ New Endpoint** to begin setup.  
     - **Select Provider Type:** Choose **MSR**, **Docker Registry**, **Harbor**, or **AWS ECR**.  
-    - **Endpoint Name:** Enter a descriptive name (e.g., *US-West Registry*, *Production Backup*).  
-    - **Endpoint URL:** Provide the full URL of the target registry (e.g., `https://example-registry.com`).  
+    - **Endpoint Name:** Enter a descriptive name (for example, *US-West Registry*, *Production Backup*).  
+    - **Endpoint URL:** Provide the full URL of the target registry (for example, `https://example-registry.com`).  
     - **Access ID:** Enter the username for the remote registry.  
     - **Access Secret:** Enter the password for the account.  
     - **Verify Connection:** Click **Test Connection** to confirm that MSR 4
@@ -87,7 +87,7 @@ necessary images, conserving bandwidth and storage.
     - **Configure Trigger Mode:** Define when replication occurs:
       - **Manual:** Triggered by an admin.  
       - **Immediate:** Starts when an image is pushed to the source.  
-      - **Scheduled:** Set a CRON-based schedule (e.g., *daily at midnight*).  
+      - **Scheduled:** Set a CRON-based schedule (for example, *daily at midnight*).  
     - **Save and Activate the Rule:** Click **Create** to save and activate.
 
 

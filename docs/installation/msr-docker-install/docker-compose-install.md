@@ -5,12 +5,19 @@ below.
 
 ## Download the MSR installer
 
+!!! note
+
+    The Mirantis Packages page hosts files stored in an underlying Amazon S3 bucket.
+    When you copy the installer download link, the URL may point directly to 
+    the Amazon S3 location instead of the `packages.mirantis.com` domain. 
+    Both URLs reference the same installer file. You can use either link to download the package.
+
 1. Locate the `.tgz` installer package of the latest release of MSR at
    [Mirantis Packages](https://packages.mirantis.com/?prefix=msr/).  
    The release is available as a single bundle and is suitable only for
    offline installations.
 
-2. Right-click on the installer package and copy the download link.
+2. Right-click the installer package and copy the download link.
 
 3. Download the package to your instance:
 

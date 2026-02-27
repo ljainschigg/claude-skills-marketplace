@@ -16,7 +16,7 @@ To migrate images, repositories, and tags from an MSR 2.x or MSR 3.x environment
 
 3. Select **New Endpoint** to add a new registry connection.
 
-4. Fill in the pop-up with the following details:
+4. Fill in the popup with the following details:
 
     - **Provider**: `DTR`  
     - **Name**: `<your-identifier>`  
@@ -35,7 +35,7 @@ To migrate images, repositories, and tags from an MSR 2.x or MSR 3.x environment
 
 6. Select **New Replication Rule** to create a replication rule.
 
-7. In the pop-up window, review and confirm the following settings:
+7. In the popup window, review and confirm the following settings:
 
     - **Replication mode**: Ensure it is set to **Pull-based**.  
     - **Source registry**: Verify that the MSR 2 and MSR 3 hosts added in previous steps are listed.  

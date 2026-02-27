@@ -42,7 +42,7 @@ contents of each message.
 
 2. **Navigate to Webhooks Settings**  
 
-    - Within the project, click on the **Webhooks** tab.  
+    - Within the project, click the **Webhooks** tab.  
 
 3. **Add a New Webhook**  
 
@@ -81,7 +81,7 @@ contents of each message.
 
 ## Webhook Payload Examples
 
-When an artifact is pushed to the registry, and you’ve configured a webhook
+When an artifact is pushed to the registry, and you have configured a webhook
 for the PUSH_ARTIFACT event, Harbor sends a JSON payload to the specified
 endpoint. Below is an example of such a payload in the **Default** format:
 

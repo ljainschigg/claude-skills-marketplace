@@ -73,7 +73,7 @@ environments.
         After the full backup, incremental backups happen
         automatically. They capture only the changes since the
         last backup if the CSI Storage driver supports this
-        capability. Please check with the manufacturer of your
+        capability. Check with the manufacturer of your
         CSI driver.
 
         When running **incremental backups**, use the

@@ -11,7 +11,7 @@ environment from the outset.
 
 Helm charts and images used for building MSR 4 are hosted and maintained by
 Mirantis. These resources are regularly scanned and updated according to
-Mirantis' corporate schedule, ensuring that they remain secure and up-to-date.
+Mirantis' corporate schedule, ensuring that they remain secure and up to date.
 
 To ensure the security of the environment, the customer must establish a secure
 communication channel between their infrastructure and Mirantis' repositories
@@ -23,7 +23,7 @@ unauthorized access or data breaches.
 
 Regularly applying security patches to all components—such as Harbor, Redis,
 PostgreSQL, and Kubernetes—is essential to mitigate vulnerabilities promptly
-and maintain a secure environment. Keeping components up-to-date with the
+and maintain a secure environment. Keeping components up to date with the
 latest security patches helps protect the system from known threats and
 exploits.
 

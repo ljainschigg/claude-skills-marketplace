@@ -47,7 +47,7 @@
         openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -config certs.conf
         ```
 
-3. If you are using the Helm certificates skip this step. If you manually
+3. If you are using the Helm certificates, skip this step. If you manually
    created your own certificates, create the Kubernetes secret. Run the
    following command from outside of the `certs` folder:
 
@@ -115,8 +115,8 @@
              enabled: true
          ```
 
-         If you are using a named StorageClass (as opposed to the default  
-         StorageClass) you need to specify it as shown in the following sample:
+         If you are using a named `StorageClass` (as opposed to the default  
+         `StorageClass`) you need to specify it as shown in the following sample:
 
          ```yaml
          persistence:

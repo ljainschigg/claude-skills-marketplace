@@ -4,10 +4,10 @@
    A backup method that works with almost any storage type, including NFS,
    local disks, or cloud storage that does not support snapshots. Useful when
    snapshots are not available or when fine-grained control over files is
-   needed.
+   necessary.
 
 **Snapshot Backup**
-   A fast, efficient way to back up entire volumes that is tightly integrated
+   A fast, efficient way to back up entire volumes that are tightly integrated
    with the storage provider. Ideal for cloud-native environments where CSI
    snapshots are supported.
 
@@ -37,7 +37,7 @@
 
 **Use Filesystem Backup if:**
 
-* Your storage provider **doesn't support snapshots** (e.g., NFS, EFS,
+* Your storage provider **does not support snapshots** (for example, NFS, EFS,
   AzureFile).
 * You need to **restore specific files** instead of the whole volume.
 * You want a backup that works with **different storage backends** (but not
@@ -46,6 +46,6 @@
 **Use Snapshot Backup if:**
 
 * You want a **fast and efficient** backup for large persistent volumes.
-* Your storage **supports CSI snapshots** or cloud-native snapshots (e.g., AWS
+* Your storage **supports CSI snapshots** or cloud-native snapshots (for example, AWS
   EBS, Azure Disks).
 * You need **incremental backups** to reduce storage costs.

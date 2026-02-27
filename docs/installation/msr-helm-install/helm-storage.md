@@ -20,7 +20,6 @@ using ``cephfs``. You can adapt these steps for your environment.
    backend you are using. The following example illustrates how to create a
    StorageClass class with a CephFS backend and Ceph CSI:
 
-
     ```yaml
     apiVersion: storage.k8s.io/v1
     kind: StorageClass

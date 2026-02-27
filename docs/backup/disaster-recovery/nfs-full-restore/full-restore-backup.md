@@ -133,11 +133,11 @@
             or DNS.
 
         ```bash
-        helm upgrade <MSR4 Helm deployment name> \
+        helm upgrade <MSR 4 Helm deployment name> \
           oci://registry.mirantis.com/harbor/helm/msr --debug \
-          --set externalURL=https://<Restored MSR4 URL> -n <MSR4 namespace> \
+          --set externalURL=https://<Restored MSR 4 URL> -n <MSR 4 namespace> \
           --reuse-values \
-          --set expose.tls.auto.commonName=<Restored MSR4 URL> \
-          --set expose.ingress.hosts.core=<Restored MSR4 URL> \
+          --set expose.tls.auto.commonName=<Restored MSR 4 URL> \
+          --set expose.ingress.hosts.core=<Restored MSR 4 URL> \
           --set database.external.host=<Postgres Database's service IP>
         ```

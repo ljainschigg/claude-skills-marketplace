@@ -14,7 +14,7 @@ prevent unauthorized access. Additionally, enabling SSL for encrypted
 connections ensures that data transmitted between clients and the PostgreSQL
 server is secure.
 
-To further enhance security, use PostgreSQL roles to implement least
+To further enhance security, use PostgreSQL roles to implement the least
 privileged access to databases and tables. Each application component should
 have its own dedicated database user, with only the minimum required
 permissions granted. This reduces the risk of unauthorized actions and ensures

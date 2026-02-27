@@ -2,13 +2,13 @@
 
 ## Create a backup
 
-1. Set MSR4 to Read-Only Mode.
+1. Set MSR 4 to Read-Only Mode.
 
-    Before initiating the backup, set MSR4 to Read-Only mode
+    Before initiating the backup, set MSR 4 to Read-Only mode
     to prevent new data from being written during the
     process, minimizing inconsistencies.
 
-    1. Log in to MSR4 as an administrator.  
+    1. Log in to MSR 4 as an administrator.  
     2. Navigate to **Administration**
        -> **Configuration**.  
     3. Under **System Settings**, enable the
@@ -46,9 +46,8 @@
 
     **Create an Incremental Backup**
 
-    After the full backup, incremental backups happen
-    automatically. They capture only the changes since the
-    last backup:
+    After the full backup, incremental backups happen automatically. 
+    They capture only the changes since the last backup:
 
     ```bash
     velero backup create msr4-incremental-backup --include-namespaces harbor --default-volumes-to-fs-backup --wait
@@ -56,7 +55,7 @@
 
 4. Complete backup by unsetting Read-Only mode.
 
-    Once the backup is complete, revert MSR4 to its normal
+    Once the backup is complete, revert MSR 4 to its normal
     operational state:
 
     1. Navigate to **Administration**
@@ -84,5 +83,3 @@ command:
 ```bash
 velero restore create msr4-incremental-restore --from-backup msr4-incremental-backup
 ```
-
-

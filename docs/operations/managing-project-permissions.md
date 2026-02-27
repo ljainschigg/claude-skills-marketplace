@@ -32,7 +32,7 @@ authorized users can modify and interact with registry content.
        - Manage the default public project, “**library**”, which is owned by
          the system administrator.
 
-     - **Anonymous User**. A user who is not logged into the system is
+     - **Anonymous User**. A user not logged into the system is
        classified as an *Anonymous User*. Anonymous users:
 
        - Have **read-only access** to public projects.
@@ -58,7 +58,7 @@ authorized users can modify and interact with registry content.
 
 ## Instructions for Setting Up Project Permissions
 
-1. **Log in** to the MSR4 web interface using your admin credentials.
+1. **Log in** to the MSR 4 web interface using your admin credentials.
 2. Navigate to **Projects** from the main menu.
 3. Click **+ New Project**.
 
@@ -70,7 +70,7 @@ authorized users can modify and interact with registry content.
     - Select **Proxy Cache** to enable this to allow this project to act as
       a pull-through cache for a particular target registry instance.
 
-      - MSR4 can only act a proxy for DockerHub, Docker Registry, Harbor,
+      - MSR 4 can only act a proxy for DockerHub, Docker Registry, Harbor,
         Aws ECR, Azure ACR, Alibaba Cloud ACR, Quay, Google GCR, Github GHCR,
         and JFrog Artifactory registries.
 
@@ -78,7 +78,7 @@ authorized users can modify and interact with registry content.
 
 ## Adding Users and Groups to a Project
 
-To add **groups** to a project you must first have OIDC authentication
+To add **groups** to a project, you must first have OIDC authentication
 enabled.
 
 1. Go to **Projects** and select the project where you want to add users.
@@ -87,7 +87,7 @@ enabled.
 
     - **Member Name**: Enter the exact username or group name as registered in
       Harbor.
-    - **Role**: Select the role (e.g., Developer, Guest) based on the required
+    - **Role**: Select the role (for example, Developer, Guest) based on the required
       access level.
 
 4. Click **Save** to assign the member with the specified role.
@@ -96,7 +96,7 @@ enabled.
 
 1. Access the Members tab within the chosen project.
 2. Select the checkbox next to the member or group.
-3. Select **ACTION** then select the role (e.g., Developer, Guest) based on the
+3. Select **ACTION** then select the role (for example, Developer, Guest) based on the
    required access level.
 
 ## Editing or Removing Members

@@ -47,8 +47,8 @@ fine-tune retention policies.
     a. In the **Repositories** dropdown, select *matching* or *excluding*.  
     b. Specify repositories in the **Repositories** field using one of the following:
 
-      - A specific repository name, e.g., `my_repo_1`.  
-      - A comma-separated list, e.g., `my_repo_1,my_repo_2,your_repo_3`.  
+      - A specific repository name, for example, `my_repo_1`.  
+      - A comma-separated list, for example, `my_repo_1,my_repo_2,your_repo_3`.  
       - A partial repository name with wildcards (*):  
         - `my_*` matches repositories starting with `my_`.  
         - `*_3` matches repositories ending with `_3`.  
@@ -71,8 +71,8 @@ fine-tune retention policies.
 
    Use the **Tags** field to define which tags the rule targets:
 
-    a. A single tag, e.g., `my_tag_1`.  
-    b. A comma-separated list, e.g., `my_tag_1,my_tag_2,your_tag_3`.  
+    a. A single tag, for example, `my_tag_1`.  
+    b. A comma-separated list, for example, `my_tag_1,my_tag_2,your_tag_3`.  
     c. A partial tag with wildcards (*):  
        - `my_*` matches tags starting with `my_`.  
        - `*_3` matches tags ending with `_3`.  

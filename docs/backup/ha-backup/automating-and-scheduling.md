@@ -8,7 +8,7 @@ Ensure that Velero is already installed and configured in your Kubernetes
 cluster. Check that:
 
 * Velero is installed.
-* Backup storage is configured (e.g., AWS S3, MinIO, Azure Blob).
+* Backup storage is configured (for example, AWS S3, MinIO, Azure Blob).
 * Snapshots are enabled if using incremental snapshot backup.
 
 

@@ -17,7 +17,7 @@ To initiate garbage collection in MSR:
 
 2. **Navigate to Administration**:
 
-    - Click on the **Administration** tab.  
+    - Click the **Administration** tab.  
     - Select **Clean Up** from the dropdown menu.
 
     ![Running Garbage Collection](.././_images/running-garbage-collection.png)

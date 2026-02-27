@@ -27,7 +27,7 @@ migration:
 - Install MSR 4 using the steps in the
   [Install MSR with High Availability](../../installation/installation-with-high-availability/index.md).
 - Configure authentication as described in the
-  [Authentication Configuration](../../operations/authentication-configuration/authentication-configuration.md).
+  [Authentication Configuration](../../operations/authentication-configuration/index.md).
 
 **Storage**
 

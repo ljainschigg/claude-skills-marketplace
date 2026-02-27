@@ -27,7 +27,7 @@ To migrate permissions to MSR 4, you must transfer:
 
 1. Ensure that the MSR 4 authorization is properly configured to enable
    **Groups** section in the main menu. Refer to the
-   [Authentication Configuration](../../../operations/authentication-configuration/authentication-configuration.md)
+   [Authentication Configuration](../../../operations/authentication-configuration/index.md)
    for setup instructions.
 
 2. Optional. Configure permission migration in the `config/config.env` file:
@@ -70,7 +70,7 @@ To migrate permissions to MSR 4, you must transfer:
 
     !!! note
         If the **Groups** section is missing from the main menu, LDAP or OIDC
-        may not be configured. See [Authentication Configuration](../../../operations/authentication-configuration/authentication-configuration.md)
+        may not be configured. See [Authentication Configuration](../../../operations/authentication-configuration/index.md)
         for instructions on how to set up user authentication.
 
 5. Migrate team permissions for namespaces and repositories:

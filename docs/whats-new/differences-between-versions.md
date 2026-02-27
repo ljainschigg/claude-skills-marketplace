@@ -9,7 +9,7 @@ For more information, refer to the full documentation or contact Mirantis.
 
 ## API
 
-API and webhook behavior has been updated to reflect Harbor’s implementation.
+API and webhook behavior have been updated to reflect Harbor’s implementation.
 These changes support better compatibility with ecosystem tools and simplify
 DevOps automation.
 
@@ -64,7 +64,7 @@ MSR 4 removes the legacy Teams and Enzi components. You must now add users
 manually to projects to configure access. Group-based access is supported only
 through AD Groups, which requires integration with LDAP/AD and OIDC.
 
-For more information, refer to [Authentication Configuration](../operations/authentication-configuration/authentication-configuration.md).
+For more information, refer to [Authentication Configuration](../operations/authentication-configuration/index.md).
 
 ## Database
 

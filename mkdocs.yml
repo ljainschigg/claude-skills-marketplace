@@ -84,13 +84,13 @@ nav:
   - Architecture:
     - Architecture: architecture/index.md
     - Reference Architecture:
-      - Reference Architecture: architecture/architecture-reference.md
+      - Reference Architecture: architecture/architecture-reference/index.md
       - Consumers Layer: architecture/architecture-reference/consumers-layer.md
       - Fundamental Services Layer: architecture/architecture-reference/fundamental-services-layer.md
       - Data Access Layer: architecture/architecture-reference/data-access-layer.md
       - Integration: architecture/architecture-reference/integration.md
     - Deployment:
-      - Deployment: architecture/deployment/deployment.md
+      - Deployment: architecture/deployment/index.md
       - Deployment Options:
         - Deployment Options: architecture/deployment/deployment-options.md
         - All-in-one Deployment: architecture/deployment/all-in-one-deployment.md
@@ -115,7 +115,7 @@ nav:
     - Storage: architecture/storage.md
     - Networking: architecture/networking.md
     - Security:
-       - Security: architecture/security/security.md
+       - Security: architecture/security/index.md
        - Kubernetes Security: architecture/security/kubernetes-security.md
        - Harbor Security: architecture/security/harbor-security.md
        - K-V Storage (Redis) Security: architecture/security/kv-storage-redis-security.md
@@ -148,7 +148,7 @@ nav:
   - Operations Guide:
     - Operations Guide: operations/index.md
     - Authentication Configuration:
-      - Authentication Configuration: operations/authentication-configuration/authentication-configuration.md
+      - Authentication Configuration: operations/authentication-configuration/index.md
       - LDAP Authentication: operations/authentication-configuration/ldap-authentication.md
       - OIDC Authentication: operations/authentication-configuration/oidc-authentication.md
       - Database Authentication: operations/authentication-configuration/database-authentication.md

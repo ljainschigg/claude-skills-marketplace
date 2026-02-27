@@ -33,7 +33,7 @@
 * **Store Backups in Multiple Locations**
 
     For disaster recovery, store a copy of backups in an
-    external object storage system (e.g., AWS S3, Azure
+    external object storage system (for example, AWS S3, Azure
     Blob, GCS):
 
     ```bash

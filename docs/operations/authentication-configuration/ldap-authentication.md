@@ -17,7 +17,7 @@
 
 3. **Provide LDAP Server Details**  
     * **Auth Mode** will say **LDAP**.  
-    * **LDAP URL**: Enter the server URL (e.g.,  
+    * **LDAP URL**: Enter the server URL (for example,  
      `ldap://example.com` or `ldaps://example.com` for secure connections).  
     * **LDAP Search DN** and **LDAP Search Password**: When a user logs in to  
       Harbor with their LDAP username and password, Harbor uses these values to  

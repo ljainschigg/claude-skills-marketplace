@@ -6,8 +6,8 @@ all services run as single-instance components without a high availability (HA)
 or replication. Such an approach is not applicable for production usage but is
 useful for testing or Proof of Concept. Refer to the installation
 guidance in the MSR 4 documentation
-[using a docker compose](../../installation/msr-docker-install/index.md)
-or you can use a helm chart approach (that is mentioned in
+[using a docker compose,](../../installation/msr-docker-install/index.md)
+or you can use a helm chart approach that is mentioned in
 [HA deployment variant](../../installation/installation-with-high-availability/index.md)
 instead, but scaling replicas to 1 in variables configuration.
 

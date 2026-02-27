@@ -18,7 +18,7 @@ in the diagram below:
 |-----------|--------------|
 | **API Server** | An HTTP server that accepts REST API requests and responds by utilizing its submodules, including **Authentication and Authorization**, **Middleware**, and **API Handlers**, to process and manage the requests effectively. |
 | **Authentication and Authorization** | The authentication service can secure requests, which can be powered by a local database, **AD/LDAP**, or **OIDC**. The **RBAC (Role-Based Access Control)** mechanism authorizes actions such as pulling or pushing images. The **Token service** issues tokens for each **Docker push/pull** command based on the user's role within a project. If a request from a Docker client lacks a token, the **Registry** redirects the request to the **Token service** for token issuance. |
-| **Middleware** | This component preprocesses incoming requests to determine whether they meet the required criteria before passing them to backend services for further processing. Various functions, including **quota management**, **signature verification**, **vulnerability severity checks**, and **robot account parsing**, are implemented as middleware. MSR4 supports Cosign for image signing and verification. Cosign is part of the Sigstore project. Cosign allows signing without relying on a separate, heavyweight service like Notary and supports keyless signing with OIDC identities. Harbor integrates this natively, providing better interoperability with Kubernetes-native tools and workflows. |
+| **Middleware** | This component preprocesses incoming requests to determine whether they meet the required criteria before passing them to backend services for further processing. Various functions, including **quota management**, **signature verification**, **vulnerability severity checks**, and **robot account parsing**, are implemented as middleware. MSR supports Cosign for image signing and verification. Cosign is part of the Sigstore project. Cosign allows signing without relying on a separate, heavyweight service like Notary and supports keyless signing with OIDC identities. Harbor integrates this natively, providing better interoperability with Kubernetes-native tools and workflows. |
 | **API Handlers** | These handle the corresponding REST API requests, primarily parsing and validating request parameters. They execute the business logic associated with the relevant API controller and generate a response, which is then written back to the client. |
 | **API Controller** | The API controller plays a critical role in orchestrating the processing of REST API requests. It's a key component within the system's architecture that manages the interaction between the user's requests and the backend services. |
 | **Configuration Manager** | Manages all system configurations, including settings for authentication types, email configurations, certificates, and other essential parameters. |
@@ -42,7 +42,7 @@ in the diagram below:
 ## Job Service
 
 The MSR 4 Job Service is a general job execution queue service to let other
-components/services submit requests of running asynchronous tasks concurrently
+components/services submit requests for running asynchronous tasks concurrently
 with simple restful APIs.
 
 ## Trivy

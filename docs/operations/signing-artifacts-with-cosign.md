@@ -8,7 +8,7 @@ This guide explains how to use Cosign to sign artifacts within MSR.
 !!! note
 
     Project administrators can enforce content trust, requiring all artifacts
-    to be signed before they can be pulled from an MSR registry.
+    to be signed before they can be pulled from an MSR.
 
 ## Using Cosign to Sign Artifacts
 
@@ -46,7 +46,7 @@ consistent management, including tag retention and immutability rules.
 
    `docker login <MSR-instance>`
 
-   Replace `<MSR-instance>` with the URL of your MSR registry.
+   Replace `<MSR-instance>` with the URL of your MSR.
 
 2. **Tag the Image:**  
    Tag your local image to match the MSR repository format:

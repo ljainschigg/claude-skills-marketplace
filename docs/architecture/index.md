@@ -4,12 +4,12 @@ The Mirantis Secure Registry (MSR) Reference Architecture provides
 comprehensive technical information on MSR, including component particulars,
 infrastructure specifications, and networking and volumes detail.
 
-- [Reference Architecture](architecture-reference.md)
+- [Reference Architecture](architecture-reference/index.md)
     - [Consumers Layer](architecture-reference/consumers-layer.md)
     - [Fundamental Services Layer](architecture-reference/fundamental-services-layer.md)
     - [Data Access Layer](architecture-reference/data-access-layer.md)
     - [Integration](architecture-reference/integration.md)
-- [Deployment](deployment/deployment.md)
+- [Deployment](deployment/index.md)
     - [Deployment Options](deployment/deployment-options.md)
         - [All-in-one Deployment](deployment/all-in-one-deployment.md)
         - [High Availability Deployment](deployment/ha-deployment.md)
@@ -29,7 +29,7 @@ infrastructure specifications, and networking and volumes detail.
 - [System Requirements](system-reqs.md)
 - [Storage](storage.md)
 - [Networking](networking.md)
-- [Security](security/security.md)
+- [Security](security/index.md)
     - [Kubernetes Security](security/kubernetes-security.md)
     - [Harbor Security](security/harbor-security.md)
     - [K-V Storage (Redis) Security](security/kv-storage-redis-security.md)

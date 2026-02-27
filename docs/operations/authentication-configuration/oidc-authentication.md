@@ -5,7 +5,7 @@ integrating authentication with identity providers.
 
 ## Prerequisites
 
-- Register MSR as a client in your OIDC provider (e.g., Okta, Keycloak, Azure
+- Register MSR as a client in your OIDC provider (for example, Okta, Keycloak, Azure
   AD).
 - Obtain the client ID, client secret, and OIDC endpoint.
 

@@ -80,7 +80,7 @@ You can now visualize the collected MSR metrics.
 Because Prometheus is already configured as a data source in Grafana,
 the only remaining step is to create a dashboard.
 
-Mirantis provides an MSR4-specific dashboard, available at the following URL:  
+Mirantis provides an MSR 4-specific dashboard, available at the following URL:  
 [https://get.mirantis.com/monitoring/msr4-dashboard.json](https://get.mirantis.com/monitoring/msr4-dashboard.json)
 
 To use the dashboard, paste the URL directly into the Grafana web UI when

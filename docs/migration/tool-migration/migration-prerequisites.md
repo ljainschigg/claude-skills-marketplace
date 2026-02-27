@@ -24,7 +24,7 @@ Complete the following tasks to prepare the target environment for migration:
 - Verify that the system meets all prerequisites.  
   See [Prerequisites](../../installation/msr-system-reqs.md).
 - Install MSR 4 using the steps in the [High availability installation](../../installation/installation-with-high-availability/index.md)  
-- Configure authentication as described in the [Authentication Configuration](../../operations/authentication-configuration/authentication-configuration.md).
+- Configure authentication as described in the [Authentication Configuration](../../operations/authentication-configuration/index.md).
 
 **Storage**  
 

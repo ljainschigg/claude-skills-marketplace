@@ -1,6 +1,6 @@
 # Prerequisites
 
-To deploy MSR on a Single-Host using Helm ensure that your environment meets
+To deploy MSR on a Single-Host using Helm, ensure that your environment meets
 the following requirements.
 
 ## Host environment

@@ -2,7 +2,7 @@
 
 Redis is an in-memory data store, and securing its configuration and
 access is critical to maintaining the integrity of cached data. While Redis
-is often part of MSR 4 installations, it’s important to note that in some
+is often part of MSR 4 installations, it is important to note that in some
 cases, a corporate key-value (K-V) storage solution may be used instead. In
 such scenarios, the responsibility for securing the K-V storage is transferred
 to the corresponding corporate service team, which must ensure the storage is

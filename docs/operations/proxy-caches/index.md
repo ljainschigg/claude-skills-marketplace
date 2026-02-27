@@ -14,7 +14,7 @@ You can use MSR proxy caches to:
 - Avoid the Docker Hub rate limit.
 
 MSR system administrators can set up a proxy cache project in another instance of MSR that links
-to an MSR registry through a predefined registry endpoint. This special project
+to an MSR through a predefined registry endpoint. This special project
 functions much like a standard Harbor project, with the key difference being
 that you can only pull images from it, not push images to it.
 To take advantage of the MSR proxy cache, update your pull commands, container

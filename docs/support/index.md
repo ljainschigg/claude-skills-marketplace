@@ -22,16 +22,16 @@ changed your password, you can access all cases and purchased resources.
       information on how to access the CloudCare Portal, guidance on submitting
       new cases, managing your resources, and other related issues.
 
-If you have a technical issue you should first consult the knowledge base,
-which you can access through the **Knowledg** tab of the CloudCare
-Portal. You should also review the MSR4 product documentation and [Release Notes](../release-notes/index.md) prior to filing a technical case, as the problem may have
+If you have a technical issue, you should first consult the knowledge base,
+which you can access through the **Knowledge** tab of the CloudCare
+Portal. You should also review the MSR 4 product documentation and [Release Notes](../release-notes/index.md) prior to filing a technical case, as the problem may have
 been fixed in a later release, or a workaround solution may be available for a
 similar problem.
 
 One of the features of the CloudCare Portal is the ability to associate
-cases with a specific MSR4 cluster. The associated cases are referred to in the
+cases with a specific MSR 4 cluster. The associated cases are referred to in the
 Portal as *Clouds*. Mirantis pre-populates your customer account with one or
-more clouds based on your subscription(s). You may also create and manage
+more clouds based on your subscription. You may also create and manage
 your Clouds to better match the way in which you use your subscription.
 
 Mirantis also recommends and encourages that you file new cases based on a
@@ -46,7 +46,7 @@ support you in a timely manner.
 
 2. Navigate to the appropriate Cloud and click the Cloud name.
 
-3. Verify that the Cloud represents the correct MSR4 cluster and support
+3. Verify that the Cloud represents the correct MSR 4 cluster and support
    entitlement.
 
 4. Click the **New Case** button near the top of the Cloud page to

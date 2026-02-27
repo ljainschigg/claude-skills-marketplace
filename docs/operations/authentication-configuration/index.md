@@ -12,7 +12,7 @@ against an external provider or internal database. Supported methods include:
 
 Each authentication method offers unique advantages depending on your
 organization's requirements. Database Authentication offers the option for
-smaller organizations or for sandbox and testing environments that don't need
+smaller organizations or for sandbox and testing environments that do not need
 or have access to an external provider to get started. For larger organizations
 and production environments, the protocols LDAP or OIDC can be used for bulk
 user onboarding and group management.

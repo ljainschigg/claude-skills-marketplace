@@ -73,7 +73,7 @@
         kind: PersistentVolumeClaim
         metadata:
           name: msr4-harbor-registry
-          namespace: <MSR4 namespace>
+          namespace: <MSR 4 namespace>
         spec:
           accessModes:
           - ReadWriteMany
@@ -118,7 +118,7 @@
             volumeAttributes:
               csi.storage.k8s.io/pv/name: <PV name>
               csi.storage.k8s.io/pvc/name: msr4-harbor-registry
-              csi.storage.k8s.io/pvc/namespace: <MSR4 namespace>
+              csi.storage.k8s.io/pvc/namespace: <MSR 4 namespace>
               mountPermissions: "0"
               server: <NFS URL>
               share: <NFS path>
@@ -256,13 +256,13 @@
             or DNS.
 
         ```bash
-        helm upgrade <MSR4 Helm deployment name> \
+        helm upgrade <MSR 4 Helm deployment name> \
           oci://registry.mirantis.com/harbor/helm/msr \
           --debug \
-          --set externalURL=https://<Restored MSR4 URL> \
-          -n <MSR4 namespace> \
+          --set externalURL=https://<Restored MSR 4 URL> \
+          -n <MSR 4 namespace> \
           --reuse-values \
-          --set expose.tls.auto.commonName=<Restored MSR4 URL> \
-          --set expose.ingress.hosts.core=<Restored MSR4 URL> \
+          --set expose.tls.auto.commonName=<Restored MSR 4 URL> \
+          --set expose.ingress.hosts.core=<Restored MSR 4 URL> \
           --set database.external.host=<Postgres Database's service IP>
         ```

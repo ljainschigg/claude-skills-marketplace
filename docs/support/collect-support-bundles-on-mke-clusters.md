@@ -1,24 +1,24 @@
 # Collect Support Bundles on MKE Clusters
 
-If your MSR4 instance runs on MKE, you can use any of the following methods to
+If your MSR 4 instance runs on MKE, you can use any of the following methods to
 obtain a support bundle.
 
 ## Obtain a full-cluster support bundle using the MKE web UI
 
 1. Log in to the MKE web UI as an administrator.
 
-2. In the left-side navigation panel, navigate to **<user name>** and click
+2. In the left-side navigation panel, navigate to **<username>** and click
    **Support Bundle**. The support bundle download will require several minutes
    to complete.
 
-!!! note 
+    !!! note 
 
-    The default name for the generated support bundle file is  
-    `docker-support-<cluster-id>-YYYYmmdd-hh_mm_ss.zip`.  
-    Mirantis suggests that you not alter the file name before submitting it to
-    the customer portal. However, if necessary, you can add a custom string
-    between `docker-support` and `<cluster-id>`, as in:  
-    `docker-support-MyProductionCluster-<cluster-id>-YYYYmmdd-hh_mm_ss.zip`.
+        The default name for the generated support bundle file is  
+        `docker-support-<cluster-id>-YYYYmmdd-hh_mm_ss.zip`.  
+        Mirantis suggests that you not alter the file name before submitting it to
+        the customer portal. However, if necessary, you can add a custom string
+        between `docker-support` and `<cluster-id>`, as in:  
+        `docker-support-MyProductionCluster-<cluster-id>-YYYYmmdd-hh_mm_ss.zip`.
 
 3. Submit the support bundle to Mirantis Customer Support by clicking
    **Share support bundle** on the success prompt that displays once the

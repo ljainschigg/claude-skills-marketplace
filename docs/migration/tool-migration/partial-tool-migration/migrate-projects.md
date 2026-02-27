@@ -104,7 +104,7 @@ To migrate repositories as projects:
 
 ## Verify the migration replication status
 
-To verify that all replication tasks have completed, run the following
+To verify that all replication tasks have been completed, run the following
 command with your environment-specific values:
 
 ```bash
@@ -144,7 +144,7 @@ the number of migration replication requests that MSR 4 sends to MSR 2.9.
 To reconfigure `maxJobWorkers` and limit how many tags are being concurrently
 migrated by MSR 4:
 
-1. Set MSR4 to Read-Only Mode:
+1. Set MSR 4 to Read-Only Mode:
 
     1. Log in to MSR 4 as an administrator.
     2. Navigate to **Administration > Configuration**.

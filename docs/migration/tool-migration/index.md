@@ -17,7 +17,7 @@ ensuring operational continuity and minimizing risk.
 - Team names and repository paths may change — pipelines may require updates.  
 - Image data migration time depends on image count, size, and environment  
   performance; plan accordingly to manage load or perform immediate migration.  
-- To minimize downtime during final cutover, repeat image migration to reduce  
+- To minimize downtime during the final cutover, repeat image migration to reduce  
   the remaining delta before the last sync.
 
 !!! note
