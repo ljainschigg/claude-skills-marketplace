@@ -33,8 +33,6 @@ be accessible and configured correctly in the firewall.
 
 | Port | Protocol | Description |
 |------|-----------|-------------|
-| **80** | HTTP | The Harbor portal and core API accept HTTP requests on  
-this port. You can change this port in the configuration file. |
-| **443** | HTTPS | The Harbor portal and core API accept HTTPS requests on  
-this port. You can change this port in the configuration file. |
+| **80** | HTTP | The Harbor portal and core API accept HTTP requests on this port. You can change this port in the configuration file. |
+| **443** | HTTPS | The Harbor portal and core API accept HTTPS requests on this port. You can change this port in the configuration file. |
 
