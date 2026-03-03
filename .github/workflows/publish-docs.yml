@@ -27,7 +27,7 @@ jobs:
           DOCS_SSH_KEY_ED25519: ${{ secrets.DOCS_SSH_KEY }}
           DOCS_ROOT: '/var/www/msr/'
           DOCS_USER: 'k0rdent-docs'
-          DOCS_HOST: 'docs-us.mirantis.com'
+          DOCS_HOST: '54.82.205.222'
         shell: bash
         run: |
           #!/bin/bash -eх
