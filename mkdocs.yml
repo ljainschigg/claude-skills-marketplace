@@ -230,6 +230,10 @@ nav:
         - Migration Tool 1.0.0: migration/tool-migration/migration-tool-release-notes/1-0-0.md
   - Release Notes:
     - Release Notes: release-notes/index.md
+    - 4.13.4:
+      - 4.13.4: release-notes/4-13-4/index.md
+      - Changelog: release-notes/4-13-4/changelog.md
+      - Security information: release-notes/4-13-4/security-information.md
     - 4.13.3:
       - 4.13.3: release-notes/4-13-3/index.md
       - Changelog: release-notes/4-13-3/changelog.md
