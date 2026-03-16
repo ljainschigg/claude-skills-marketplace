@@ -175,6 +175,7 @@ nav:
     - Vulnerability Scanning: operations/vulnerability-scanning.md
   - Backup Guide:
     - Backup Guide: backup/index.md
+    - Velero Installation: backup/velero-installation.md
     - HA Backup:
       - HA Backup: backup/ha-backup/ha-backup.md
       - File System Backup vs Snapshot Backup: backup/ha-backup/system-backup-vs-snapshot-backup.md
