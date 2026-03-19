@@ -173,6 +173,15 @@ nav:
       - MSR installation may fail on RHEL 9.4 and later: operations/tshoot/rhel-9-4.md
     - Upgrade Guide: operations/upgrade.md
     - Vulnerability Scanning: operations/vulnerability-scanning.md
+  - Tutorials:
+    - Tutorials: tutorials/index.md
+    - Setup for MSR with Entra ID OIDC authentication:
+      - Setup for MSR with Entra ID OIDC authentication: tutorials/setup-for-msr-with-entra-id-oidc-authentication/index.md
+      - Install MSR: tutorials/setup-for-msr-with-entra-id-oidc-authentication/install-msr.md
+      - Set up Entra ID: tutorials/setup-for-msr-with-entra-id-oidc-authentication/set-up-entra-id.md
+      - Configure MSR for OIDC authentication: tutorials/setup-for-msr-with-entra-id-oidc-authentication/configure-msr-for-oidc-authentication.md
+      - Configure OIDC group mapping: tutorials/setup-for-msr-with-entra-id-oidc-authentication/configure-oidc-group-mapping.md
+      - Inspect OIDC responses: tutorials/setup-for-msr-with-entra-id-oidc-authentication/inspect-oidc-responses.md
   - Backup Guide:
     - Backup Guide: backup/index.md
     - Velero Installation: backup/velero-installation.md
