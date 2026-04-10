@@ -1,0 +1,120 @@
+name: Validate Docs (MkDocs Strict Build)
+
+# Runs mkdocs build --strict on every push and PR to main and release branches,
+# and on manual dispatch.
+#
+# --strict promotes all MkDocs warnings to errors, so broken internal links,
+# missing nav pages, and unresolvable includes fail the build rather than
+# printing a warning and succeeding silently.
+#
+# On PRs, errors and warnings are also emitted as inline GitHub annotations,
+# pointing at the specific file (and line, when MkDocs provides one) in the
+# diff view.
+#
+# NOTE: The on: trigger below already limits execution to main and release-v*
+# branches. No additional branch-validation logic is needed inside the job.
+#
+# CANONICAL: This workflow should be present and identical in all repos.
+
+on:
+  pull_request:
+    branches:
+      - main
+      - 'release-v*'
+  push:
+    branches:
+      - main
+      - 'release-v*'
+  workflow_dispatch:  # allows manual runs from the GitHub Actions UI
+
+permissions:
+  contents: read
+  pull-requests: write  # required to post inline annotations on PRs
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # For PRs, check out the PR branch head.
+          # For pushes and manual dispatches, check out the triggering commit.
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install requirements
+        run: |
+          python3 -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            echo "No requirements.txt found — skipping pip install"
+          fi
+
+      - name: Build and validate docs (strict mode)
+        run: |
+          set -euo pipefail
+          source .venv/bin/activate
+
+          BUILD_LOG="/tmp/mkdocs-build.log"
+          : > "$BUILD_LOG"
+
+          # Run mkdocs build --strict, capturing all output to the log.
+          # The || EXIT_CODE=$? pattern prevents set -e from killing the script
+          # on a non-zero exit so we can parse the log before re-exiting.
+          EXIT_CODE=0
+          mkdocs build --strict 2>&1 | tee "$BUILD_LOG" || EXIT_CODE=$?
+
+          # Parse the log and emit GitHub workflow annotations.
+          #
+          # Two patterns are tried per line:
+          #   1. ERROR/WARNING with file:line  → precise inline annotation
+          #   2. ERROR/WARNING without file:line → global annotation
+          #
+          # NOTE: MkDocs rarely emits a line number, so most annotations will
+          # be global (pattern 2). The file:line branch is kept for completeness
+          # as some plugins do emit it.
+          #
+          # NOTE: (( ++ANNOTATION_COUNT )) uses pre-increment deliberately.
+          # Post-increment ((ANNOTATION_COUNT++)) evaluates to the old value,
+          # so when count is 0 the expression is falsy and set -e kills the
+          # script before the first annotation is recorded.
+          ANNOTATION_COUNT=0
+
+          while IFS= read -r line; do
+            if [[ "$line" =~ ^(ERROR|WARNING)[[:space:]]+-[[:space:]](.+):([0-9]+):[[:space:]]*(.+)$ ]]; then
+              LEVEL="${BASH_REMATCH[1],,}"
+              FILE="${BASH_REMATCH[2]#./}"
+              LINE_NO="${BASH_REMATCH[3]}"
+              MSG="${BASH_REMATCH[4]}"
+              if [[ "$LEVEL" == "error" ]]; then
+                echo "::error file=$FILE,line=$LINE_NO::$MSG"
+              else
+                echo "::warning file=$FILE,line=$LINE_NO::$MSG"
+              fi
+              (( ++ANNOTATION_COUNT ))
+
+            elif [[ "$line" =~ ^(ERROR|WARNING)[[:space:]]+-[[:space:]](.+)$ ]]; then
+              LEVEL="${BASH_REMATCH[1],,}"
+              MSG="${BASH_REMATCH[2]}"
+              if [[ "$LEVEL" == "error" ]]; then
+                echo "::error::$MSG"
+              else
+                echo "::warning::$MSG"
+              fi
+              (( ++ANNOTATION_COUNT ))
+            fi
+          done < "$BUILD_LOG"
+
+          echo "Created $ANNOTATION_COUNT annotations"
+
+          # Exit with mkdocs's own exit code: 0 = clean build, non-zero = failure.
+          exit $EXIT_CODE

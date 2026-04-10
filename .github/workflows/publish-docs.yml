@@ -12,7 +12,7 @@ jobs:
     runs-on: arc-runner-set-mirantis-private
     steps:
       - name: Checkout docs
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 #v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
         with:
           ref: gh-pages
           repository: Mirantis/msr-docs
@@ -22,7 +22,10 @@ jobs:
         id: publish
         env:
           BRANCHES: 'next latest stable 4.13 4.0'
-          FILES: 'versions.json index.html'
+          # FILES: root-level files rsynced individually (not branch directories).
+          # robots.txt and sitemap.xml are written to gh-pages root by deploy-docs-warnings.yml
+          # so that AI crawlers and search engines can discover and index the docs.
+          FILES: 'versions.json index.html robots.txt sitemap.xml'
           GH_TOKEN: ${{ github.token }}
           DOCS_SSH_KEY_ED25519: ${{ secrets.DOCS_SSH_KEY }}
           DOCS_ROOT: '/var/www/msr/'
@@ -30,7 +33,7 @@ jobs:
           DOCS_HOST: '54.82.205.222'
         shell: bash
         run: |
-          #!/bin/bash -eх
+          #!/bin/bash -ex
           sudo apt-get update
           sudo apt-get install -y rsync
           mkdir -p ~/.ssh/

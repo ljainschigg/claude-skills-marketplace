@@ -146,3 +146,50 @@ ul.video-list .thumb {
     padding-top: 1.5rem !important;
   }
 
+
+}
+
+/* Navigation item spacing — cross-browser fix.
+ *
+ * Material uses margin-top on .md-nav__link for spacing, not .md-nav__item.
+ * Standalone items use <a> tags; nested (submenu) items use <div> tags.
+ * Firefox applies residual UA stylesheet defaults to <a> that it doesn't
+ * apply to <div>, causing uneven spacing. Explicitly zeroing margin and
+ * using padding-top instead gives consistent results across browsers.
+ *
+ * Additionally, Material's collapsed submenu <ul> has padding-bottom: ~8.8px
+ * that bleeds into layout even when hidden (visibility: collapse), making
+ * nested <li> items taller than standalone items. Material's own compensating
+ * margin-bottom has no effect (last-child). We zero it on collapsed navs.
+ *
+ * REVERT: delete this entire block to restore Material defaults.
+ */
+.md-nav__item > .md-nav__link {
+  margin: 0 !important;
+  padding-top: 0.4rem;
+  padding-bottom: 0;
+  align-items: flex-start; /* prevent centering from adding phantom space below wrapped text */
+}
+
+/* Zero the collapsed nav's residual padding-bottom so its height is truly 0. */
+.md-nav__toggle:not(:checked) ~ .md-nav .md-nav__list {
+  padding-bottom: 0 !important;
+}
+
+/* Cancel Material's compensating negative margin-bottom on the collapsed nav.
+   Material sets margin-bottom: -8.8px to cancel the residual nav height, but
+   since we've zeroed the height, the negative margin over-corrects and pulls
+   the next <li> up 8.8px — compressing nested→standalone gaps while
+   standalone→nested gaps remain full size. */
+.md-nav__item--nested > .md-nav {
+  margin-bottom: 0 !important;
+}
+
+/* Normalize spacing for all consecutive item transitions.
+   With the nav margin zeroed above, all items now have a uniform gap.
+   We apply a consistent -8px tightening to every adjacent pair so the
+   visual rhythm matches across nested→nested, standalone→nested,
+   nested→standalone, and standalone→standalone transitions. */
+.md-nav__item + .md-nav__item {
+  margin-top: -8px;
+}

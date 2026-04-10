@@ -1,6 +1,11 @@
 site_name: MSR Documentation
 site_description: Documentation for Mirantis Secure Registry 4
 site_author: Mirantis, Inc.
+# Required for sitemap.xml generation — MkDocs will not populate sitemap.xml
+# without an absolute base URL. Points to /latest/ so that the sitemap served
+# at https://docs.mirantis.com/msr/latest/sitemap.xml contains correct
+# fully-qualified URLs for search engine and AI crawler indexing.
+site_url: https://docs.mirantis.com/msr/latest/
 
 docs_dir: docs/
 # repo_name: MSR 4 Documentation
