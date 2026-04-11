@@ -10,7 +10,7 @@ import json
 import os
 import sys
 
-REPO = "https://github.com/jjainschigg-r/claude-skills-marketplace.git"
+REPO = "git@github.com:jjainschigg-r/claude-skills-marketplace.git"
 MARKETPLACE_NAME = "mirantis-skills"
 PLUGINS_DIR = "plugins"
 OUTPUT_PATH = os.path.join("site", "marketplace.json")
