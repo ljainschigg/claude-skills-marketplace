@@ -47,6 +47,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+          # Stash built site outside the repo before switching branches
+          cp -r site/ /tmp/site/
+
           # Check out gh-pages (create it if it doesn't exist)
           git fetch origin gh-pages || true
           if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
@@ -57,7 +60,7 @@ jobs:
           fi
 
           # Replace contents with freshly built site
-          rsync -a --delete --exclude='.git' site/ .
+          rsync -a --delete --exclude='.git' /tmp/site/ .
           git add -A
           git diff --cached --quiet && echo "pushed=false" >> "$GITHUB_OUTPUT" && exit 0
           git commit -m "Deploy site from main@${{ github.sha }}"
