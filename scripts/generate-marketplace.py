@@ -10,7 +10,7 @@ import json
 import os
 import sys
 
-REPO = "jjainschigg-r/claude-skills-marketplace"
+REPO = "https://github.com/jjainschigg-r/claude-skills-marketplace.git"
 MARKETPLACE_NAME = "mirantis-skills"
 PLUGINS_DIR = "plugins"
 OUTPUT_PATH = os.path.join("site", "marketplace.json")
@@ -30,9 +30,9 @@ def load_plugin(plugin_dir):
         "description": manifest.get("description", ""),
         "version": manifest.get("version", "1.0.0"),
         "source": {
-            "source": "github",
-            "repo": REPO,
-            "path": f"./plugins/{plugin_dir}"
+            "source": "git-subdir",
+            "url": REPO,
+            "path": f"plugins/{plugin_dir}"
         }
     }
 
