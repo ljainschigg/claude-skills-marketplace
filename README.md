@@ -81,3 +81,283 @@ By default, we follow the [Kubernetes documentation style guide](https://kuberne
 
 All header text should be capitalized.
 
+---
+
+# Plugin Development Guide
+
+This repo is a monorepo of Claude Code plugins. Each plugin lives under `plugins/<plugin-name>/` and is independently installable via the marketplace. CI automatically discovers plugins and regenerates `marketplace.json` on every push to `main`.
+
+## Plugin types
+
+A plugin can contain any combination of:
+- **Skills** — prompt files (`SKILL.md`) invoked with `/skill-name`
+- **MCP servers** — processes that expose tools Claude can call, started automatically when the plugin loads
+- Agents, hooks, LSP servers (not covered here)
+
+A plain skill (no MCP server) is just a prompt. An MCP-equipped skill is a prompt that calls tools provided by a bundled server process.
+
+---
+
+## Directory structure
+
+### Plain skill (prompt only)
+
+```
+plugins/
+  my-skill/
+    .claude-plugin/
+      plugin.json
+    skills/
+      my-skill/
+        SKILL.md
+```
+
+### MCP-equipped skill (Python)
+
+```
+plugins/
+  my-skill/
+    .claude-plugin/
+      plugin.json        ← references .mcp.json
+    .mcp.json            ← declares the MCP server
+    skills/
+      my-skill/
+        SKILL.md         ← calls MCP tools by name
+    server/
+      mcp_server.py      ← Python MCP server with inline dependencies
+```
+
+### MCP-equipped skill (Node.js)
+
+```
+plugins/
+  my-skill/
+    .claude-plugin/
+      plugin.json
+    .mcp.json
+    run-server.sh        ← wrapper: installs deps on first run, then starts server
+    skills/
+      my-skill/
+        SKILL.md
+    server/
+      index.js           ← Node.js MCP server
+      package.json       ← npm dependencies
+```
+
+---
+
+## plugin.json
+
+Minimal (plain skill):
+
+```json
+{
+  "name": "my-skill",
+  "description": "What this skill does.",
+  "version": "1.0.0"
+}
+```
+
+With MCP server:
+
+```json
+{
+  "name": "my-skill",
+  "description": "What this skill does.",
+  "version": "1.0.0",
+  "mcpServers": "./.mcp.json"
+}
+```
+
+**Note:** Do not declare `mcpServers` inline in `plugin.json` — there is a known bug where inline declarations are silently dropped. Always reference a separate `.mcp.json` file.
+
+---
+
+## .mcp.json
+
+Declares one or more MCP servers. The `command` and `args` are what Claude Code runs to start the server process.
+
+```json
+{
+  "server-name": {
+    "command": "uv",
+    "args": ["run", "${CLAUDE_PLUGIN_ROOT}/server/mcp_server.py"]
+  }
+}
+```
+
+### Environment variables available in .mcp.json
+
+| Variable | Value |
+|---|---|
+| `${CLAUDE_PLUGIN_ROOT}` | Path to the installed plugin directory. Use this to reference bundled scripts. |
+| `${CLAUDE_PLUGIN_DATA}` | Persistent directory for this plugin's runtime data. Survives plugin updates. Use this for venvs, `node_modules`, caches, and any stateful data. |
+
+---
+
+## Python MCP server pattern
+
+Use `uv run` to start the server. Declare dependencies inline using [PEP 723](https://peps.python.org/pep-0723/) at the top of the script — `uv` installs them automatically on first run, no manual `pip install` required.
+
+```python
+# /// script
+# dependencies = [
+#   "mcp",
+#   "your-dependency-here",
+# ]
+# ///
+
+from mcp.server.fastmcp import FastMCP
+
+mcp = FastMCP("server-name")
+
+@mcp.tool()
+def my_tool(arg: str) -> str:
+    """Tool description shown to Claude."""
+    return f"Result: {arg}"
+
+if __name__ == "__main__":
+    mcp.run()
+```
+
+`.mcp.json` entry:
+
+```json
+{
+  "server-name": {
+    "command": "uv",
+    "args": ["run", "${CLAUDE_PLUGIN_ROOT}/server/mcp_server.py"]
+  }
+}
+```
+
+**Prerequisite:** `uv` must be installed on the user's machine. Install: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+
+---
+
+## Node.js MCP server pattern
+
+Because `node_modules` must live alongside the script for ES module resolution, a wrapper shell script handles first-run installation into `${CLAUDE_PLUGIN_DATA}`, which persists across plugin updates.
+
+`run-server.sh`:
+
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
+
+DATA_DIR="${CLAUDE_PLUGIN_DATA}/node"
+SERVER_DIR="${CLAUDE_PLUGIN_ROOT}/server"
+
+mkdir -p "${DATA_DIR}"
+
+# Install dependencies if not present or if package.json has changed
+if [ ! -f "${DATA_DIR}/node_modules/.installed" ] || \
+   [ "${SERVER_DIR}/package.json" -nt "${DATA_DIR}/node_modules/.installed" ]; then
+  cp "${SERVER_DIR}/package.json" "${DATA_DIR}/"
+  npm install --prefix "${DATA_DIR}" --ignore-scripts --silent
+  touch "${DATA_DIR}/node_modules/.installed"
+fi
+
+# Always copy server script so reinstalls pick up code changes
+cp "${SERVER_DIR}/index.js" "${DATA_DIR}/"
+
+exec node "${DATA_DIR}/index.js"
+```
+
+`server/index.js` (ES module):
+
+```javascript
+import { Server } from "@modelcontextprotocol/sdk/server/index.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { CallToolRequestSchema, ListToolsRequestSchema } from "@modelcontextprotocol/sdk/types.js";
+
+const server = new Server(
+  { name: "server-name", version: "1.0.0" },
+  { capabilities: { tools: {} } }
+);
+
+server.setRequestHandler(ListToolsRequestSchema, async () => ({
+  tools: [{
+    name: "my_tool",
+    description: "Tool description shown to Claude.",
+    inputSchema: {
+      type: "object",
+      properties: { arg: { type: "string" } },
+      required: ["arg"]
+    }
+  }]
+}));
+
+server.setRequestHandler(CallToolRequestSchema, async (request) => {
+  const { arg } = request.params.arguments;
+  return { content: [{ type: "text", text: `Result: ${arg}` }] };
+});
+
+const transport = new StdioServerTransport();
+await server.connect(transport);
+```
+
+`server/package.json`:
+
+```json
+{
+  "name": "my-skill-server",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "your-dependency": "^1.0.0"
+  }
+}
+```
+
+`.mcp.json` entry:
+
+```json
+{
+  "server-name": {
+    "command": "bash",
+    "args": ["${CLAUDE_PLUGIN_ROOT}/run-server.sh"]
+  }
+}
+```
+
+**Prerequisite:** Node.js and npm must be installed on the user's machine.
+
+---
+
+## SKILL.md
+
+The skill prompt tells Claude which MCP tool to call. Keep it minimal — the logic belongs in the server, not the prompt.
+
+```markdown
+---
+name: my-skill
+description: What this skill does.
+---
+
+Call the `my_tool` tool with the user's input.
+Return the result exactly as the tool returns it.
+```
+
+---
+
+## Adding a plugin to the marketplace
+
+1. Create `plugins/<your-plugin-name>/` following the structure above
+2. Push to `main`
+3. CI runs `scripts/generate-marketplace.py`, which walks `plugins/` and rebuilds `marketplace.json`
+4. Users run `/plugin marketplace update mirantis-skills` to pick up the new plugin
+
+No manual edits to `marketplace.json` — it is generated entirely from the `plugins/` directory.
+
+---
+
+## Working examples
+
+| Plugin | Runtime | External dependency |
+|---|---|---|
+| `example-skill` | None (prompt only) | — |
+| `example-mcp-python-skill` | Python via `uv` | `cowsay` |
+| `example-mcp-node-skill` | Node.js via `npm` | `figlet` |
+
