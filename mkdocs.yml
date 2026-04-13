@@ -61,6 +61,8 @@ nav:
   - Home: index.md
   - Skills:
     - example-skill: skills/example-skill.md
+    - example-mcp-python-skill: skills/example-mcp-python-skill.md
+    - example-mcp-node-skill: skills/example-mcp-node-skill.md
 
 markdown_extensions:
   - admonition

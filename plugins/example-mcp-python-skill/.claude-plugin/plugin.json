@@ -1,0 +1,6 @@
+{
+  "name": "example-mcp-python-skill",
+  "description": "Demonstrates a skill backed by a Python MCP server with an external dependency.",
+  "version": "1.0.0",
+  "mcpServers": "./.mcp.json"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "example-mcp-node-skill",
+  "description": "Demonstrates a skill backed by a Node.js MCP server with an external dependency.",
+  "version": "1.0.0",
+  "mcpServers": "./.mcp.json"
+}
