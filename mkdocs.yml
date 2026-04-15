@@ -59,11 +59,14 @@ plugins:
 
 nav:
   - Home: index.md
-  - Skills:
+  - Plugin Dev Tools:
+    - skills/plugin-dev-tools/index.md
+  - General Purpose Skills:
+    - markdown-doc-cleaner: skills/markdown-doc-cleaner.md
+  - Example Plugins:
     - example-skill: skills/example-skill.md
     - example-mcp-python-skill: skills/example-mcp-python-skill.md
     - example-mcp-node-skill: skills/example-mcp-node-skill.md
-    - markdown-doc-cleaner: skills/markdown-doc-cleaner.md
 
 markdown_extensions:
   - admonition
