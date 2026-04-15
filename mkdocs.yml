@@ -13,7 +13,7 @@ theme:
   highlightjs: true
   custom_dir: docs/custom_theme
   language: "en"
-  favicon: assets/msr-fav.png
+  favicon: assets/marketplace-mark.svg
   logo: assets/mirantis-logo-inverted.svg
 
   palette:
