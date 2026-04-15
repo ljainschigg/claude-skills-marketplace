@@ -7,7 +7,7 @@ Fast check that a plugin's `README.md` meets the documentation standards require
 ## Install
 
 ```
-/plugin install plugin-docs-lint@mirantis-skills
+/plugin install plugin-docs-lint@mirantis-plugins
 ```
 
 ## Use

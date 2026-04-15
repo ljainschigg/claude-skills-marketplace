@@ -7,7 +7,7 @@ Curator tool that walks every plugin in a marketplace repository and reports for
 ## Install
 
 ```
-/plugin install validate-marketplace@mirantis-skills
+/plugin install validate-marketplace@mirantis-plugins
 ```
 
 ## Use

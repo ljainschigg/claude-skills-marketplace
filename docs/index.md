@@ -1,8 +1,18 @@
-# Claude Skills Marketplace
+# Claude Plugins Marketplace
 
-Claude skills are ready-made capabilities that extend what Claude Code can do. Instead of explaining your workflow to Claude from scratch every time, you install a skill once and invoke it with a single command.
+This marketplace is where Mirantis teams share Claude Code plugins — packaged capabilities that extend what Claude Code can do.
 
-This marketplace is where Mirantis teams share the skills they've built.
+---
+
+## Plugins and skills
+
+Two terms you will see throughout this site:
+
+**Plugin** — the installable package. A plugin is what this marketplace distributes, what you install with `/plugin install`, and what lives in a repository as a structured directory. A plugin can contain one or more skills, an MCP server, configuration, and documentation.
+
+**Skill** — an individual `/command` within a plugin. When you type `/example-skill`, you are invoking a skill. Skills are defined by a prompt file (`SKILL.md`) inside the plugin and can optionally call tools exposed by an MCP server.
+
+In practice, many plugins contain exactly one skill with the same name as the plugin itself. More capable plugins may bundle several related skills together.
 
 ---
 
@@ -14,7 +24,7 @@ You need **Claude Code** installed and running. If you haven't done that yet, as
 
 ## One-time setup
 
-Add the Mirantis skills marketplace to your Claude Code installation. Open a terminal, start Claude Code, and run:
+Add the Mirantis plugins marketplace to your Claude Code installation. Open a terminal, start Claude Code, and run:
 
 ```
 /plugin marketplace add https://jjainschigg-r.github.io/claude-skills-marketplace/marketplace.json
@@ -24,7 +34,7 @@ You only need to do this once. Claude Code will remember it.
 
 ---
 
-## Browse available skills
+## Browse available plugins
 
 To see what's available:
 
@@ -34,23 +44,23 @@ To see what's available:
 
 ---
 
-## Install a skill
+## Install a plugin
 
 ```
-/plugin install <skill-name>@mirantis-skills
+/plugin install <plugin-name>@mirantis-plugins
 ```
 
-Replace `<skill-name>` with the name of the skill you want. For example:
+Replace `<plugin-name>` with the name of the plugin you want. For example:
 
 ```
-/plugin install example-skill@mirantis-skills
+/plugin install example-skill@mirantis-plugins
 ```
 
 ---
 
 ## Use a skill
 
-Once installed, invoke a skill by typing `/` followed by its name:
+Once a plugin is installed, invoke its skill by typing `/` followed by the skill name:
 
 ```
 /example-skill
@@ -60,21 +70,21 @@ Claude Code will run the skill in the context of whatever you're working on.
 
 ---
 
-## Keep skills up to date
+## Keep plugins up to date
 
-When new skills are added or existing ones are updated, refresh your local list:
+When new plugins are added or existing ones are updated, refresh your local list:
 
 ```
-/plugin marketplace update mirantis-skills
+/plugin marketplace update mirantis-plugins
 ```
 
-Then reinstall any skills you want to update.
+Then reinstall any plugins you want to update.
 
 ---
 
 ## Plugin Dev Tools
 
-If you are building a plugin, use the Plugin Dev Tools. These are fully-validated platform skills that encode the standards and review criteria used by marketplace curators — so you can catch and fix problems before filing a PR, and submit with confidence.
+If you are building a plugin, use the Plugin Dev Tools. These are fully-validated platform plugins that encode the standards and review criteria used by marketplace curators — so you can catch and fix problems before filing a PR, and submit with confidence.
 
 | Tool | What it does |
 |---|---|
@@ -86,13 +96,13 @@ If you are building a plugin, use the Plugin Dev Tools. These are fully-validate
 Install any of them with:
 
 ```
-/plugin install <tool-name>@mirantis-skills
+/plugin install <tool-name>@mirantis-plugins
 ```
 
 We encourage everyone building plugins to use these tools. The security check runs automatically as part of submission, and its report is included in every PR for reviewers.
 
 ---
 
-## Contribute a skill
+## Contribute a plugin
 
-Built something useful? The skills in this marketplace are maintained in a shared repository. Use `/submit-plugin` to file a PR — the more skills we share, the less we each have to reinvent.
+Built something useful? Plugins in this marketplace are maintained in a shared repository. Use `/submit-plugin` to file a PR — the more we share, the less we each have to reinvent.

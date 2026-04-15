@@ -18,10 +18,10 @@ If you haven't added the marketplace yet:
 /plugin marketplace add https://jjainschigg-r.github.io/claude-skills-marketplace/marketplace.json
 ```
 
-Then install the skill:
+Then install the plugin:
 
 ```
-/plugin install example-mcp-node-skill@mirantis-skills
+/plugin install example-mcp-node-skill@mirantis-plugins
 ```
 
 ## Use

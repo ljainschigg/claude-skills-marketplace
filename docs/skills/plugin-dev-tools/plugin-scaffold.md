@@ -7,7 +7,7 @@ Generates a complete, correctly structured plugin directory from a plain-languag
 ## Install
 
 ```
-/plugin install plugin-scaffold@mirantis-skills
+/plugin install plugin-scaffold@mirantis-plugins
 ```
 
 ## Use

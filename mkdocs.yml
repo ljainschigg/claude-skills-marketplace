@@ -1,5 +1,5 @@
-site_name: Claude Skills Marketplace
-site_description: Mirantis Claude Skills Marketplace
+site_name: Claude Plugins Marketplace
+site_description: Mirantis Claude Plugins Marketplace
 site_author: Mirantis, Inc.
 site_url: https://ai.mirantis.com/claude-skills/
 
@@ -67,7 +67,7 @@ nav:
     - plugin-docs-lint: skills/plugin-dev-tools/plugin-docs-lint.md
     - plugin-diff: skills/plugin-dev-tools/plugin-diff.md
     - validate-marketplace: skills/plugin-dev-tools/validate-marketplace.md
-  - General Purpose Skills:
+  - General Purpose Plugins:
     - markdown-doc-cleaner: skills/markdown-doc-cleaner.md
   - Example Plugins:
     - example-skill: skills/example-skill.md

@@ -1,4 +1,4 @@
-# Claude Skills Marketplace
+# Claude Plugins Marketplace
 
 This project utilises Mkdocs with the Material theme and Mermaid for
 diagrams. Currently the docs are published using github actions on github pages
@@ -347,7 +347,7 @@ Return the result exactly as the tool returns it.
 1. Create `plugins/<your-plugin-name>/` following the structure above
 2. Push to `main`
 3. CI runs `scripts/generate-marketplace.py`, which walks `plugins/` and rebuilds `marketplace.json`
-4. Users run `/plugin marketplace update mirantis-skills` to pick up the new plugin
+4. Users run `/plugin marketplace update mirantis-plugins` to pick up the new plugin
 
 No manual edits to `marketplace.json` — it is generated entirely from the `plugins/` directory.
 

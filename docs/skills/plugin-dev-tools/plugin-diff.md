@@ -7,7 +7,7 @@ Produces a plain-language summary of what changed between two versions of a plug
 ## Install
 
 ```
-/plugin install plugin-diff@mirantis-skills
+/plugin install plugin-diff@mirantis-plugins
 ```
 
 ## Use

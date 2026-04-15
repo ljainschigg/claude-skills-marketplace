@@ -7,7 +7,7 @@ Deep inspection of a plugin folder that evaluates format compliance, security ri
 ## Install
 
 ```
-/plugin install plugin-security-check@mirantis-skills
+/plugin install plugin-security-check@mirantis-plugins
 ```
 
 ## Use

@@ -1,6 +1,6 @@
 # submit-plugin
 
-Automates the full workflow for submitting a plugin to the Mirantis skills marketplace. Runs a security check, clones a fresh copy of the marketplace repository, creates a PR branch, moves files into the correct locations, validates the documentation build, and files a pull request whose description includes the full security review report.
+Automates the full workflow for submitting a plugin to the Mirantis plugins marketplace. Runs a security check, clones a fresh copy of the marketplace repository, creates a PR branch, moves files into the correct locations, validates the documentation build, and files a pull request whose description includes the full security review report.
 
 The PR is never merged automatically. Merging is a human decision made by marketplace curators after reviewing the submission.
 
@@ -9,7 +9,7 @@ The PR is never merged automatically. Merging is a human decision made by market
 ## Install
 
 ```
-/plugin install submit-plugin@mirantis-skills
+/plugin install submit-plugin@mirantis-plugins
 ```
 
 ## Use

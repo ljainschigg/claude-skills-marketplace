@@ -12,10 +12,10 @@ If you haven't added the marketplace yet:
 /plugin marketplace add https://jjainschigg-r.github.io/claude-skills-marketplace/marketplace.json
 ```
 
-Then install the skill:
+Then install the plugin:
 
 ```
-/plugin install markdown-doc-cleaner@mirantis-skills
+/plugin install markdown-doc-cleaner@mirantis-plugins
 ```
 
 ## Use

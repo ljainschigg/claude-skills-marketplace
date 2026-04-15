@@ -1,6 +1,6 @@
 # example-skill
 
-A placeholder skill used to validate the Mirantis Claude Skills Marketplace pipeline.
+A placeholder skill used to validate the Mirantis Claude Plugins Marketplace pipeline.
 
 ---
 
@@ -12,10 +12,10 @@ If you haven't added the marketplace yet:
 /plugin marketplace add https://jjainschigg-r.github.io/claude-skills-marketplace/marketplace.json
 ```
 
-Then install the skill:
+Then install the plugin:
 
 ```
-/plugin install example-skill@mirantis-skills
+/plugin install example-skill@mirantis-plugins
 ```
 
 ## Use

@@ -1,9 +1,9 @@
 ---
 name: submit-plugin
-description: Submits a Claude Code plugin to the Mirantis skills marketplace
+description: Submits a Claude Code plugin to the Mirantis plugins marketplace
 ---
 
-You are managing the complete plugin submission workflow for the Mirantis Claude Skills Marketplace. Follow every step in order. Stop and explain clearly if any step fails. **Do not merge the PR** — merging is a decision for human curators.
+You are managing the complete plugin submission workflow for the Mirantis Claude Plugins Marketplace. Follow every step in order. Stop and explain clearly if any step fails. **Do not merge the PR** — merging is a decision for human curators.
 
 ---
 
